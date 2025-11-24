@@ -1,11 +1,283 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dev Mendes</title>
+  <meta charset="UTF-8" />
+  <title>Dev Mendes • Agência de Tecnologia & Sites</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Ícones FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style/style.css" />
 </head>
+
 <body>
-    
+  <!-- BOTÃO FIXO WHATSAPP -->
+  <div class="whatsapp-fixo">
+    <button type="button" class="js-whatsapp">
+      <i class="fa-brands fa-whatsapp"></i>
+      Fale pelo WhatsApp
+    </button>
+  </div>
+
+  <!-- TOPO -->
+  <header id="topo">
+    <div class="topbar">
+      <div class="logo">
+        <div class="logo-badge">DM</div>
+        <span>Dev Mendes</span>
+      </div>
+
+      <button class="menu-toggle" aria-label="Abrir menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+      <nav>
+        <ul id="menu-links">
+          <li><a href="#inicio">Início</a></li>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#planos">Planos</a></li>
+          <li><a href="#espaco">Portfólio</a></li>
+          <li><a href="#depoimentos">Depoimentos</a></li>
+          <li><a href="#agendamento">Agendamento</a></li>
+          <li><a href="#mapa">Mapa</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- SEÇÕES DO SITE (IDÊNTICAS À ANTERIOR) -->
+  <!-- INÍCIO -->
+  <main id="inicio">
+    <section class="hero">
+      <div class="container hero-inner">
+        <div>
+          <div class="hero-badge">
+            <i class="fa-solid fa-bolt"></i>
+            Agência de Sites & Tecnologia
+          </div>
+
+          <h1 class="hero-title">Sites profissionais para o seu negócio agendar mais clientes.</h1>
+
+          <p class="hero-subtitle">
+            A <strong>Dev Mendes</strong> desenvolve landing pages e sites completos para salões,
+            clínicas, petshops e empresas de serviços que precisam de agendamento online.
+          </p>
+
+          <div class="hero-actions">
+            <button class="btn btn-primary js-scroll-agendar">
+              <i class="fa-regular fa-calendar-check"></i>
+              Agendar conversa
+            </button>
+
+            <button class="btn btn-outline" onclick="document.querySelector('#espaco').scrollIntoView({behavior:'smooth'})">
+              Ver projetos
+            </button>
+          </div>
+        </div>
+
+        <aside class="hero-contact-card">
+          <h3>Dados de contato e endereço</h3>
+          <p><strong>E-mail:</strong> contato@devmendes.com</p>
+          <p><strong>WhatsApp:</strong> (11) 99999-9999</p>
+          <p><strong>Endereço:</strong> 123 Collins Street, Melbourne</p>
+          <p><strong>Atendimento:</strong> Seg–Sex, 9h—18h</p>
+
+          <div class="hero-contact-pill">
+            <i class="fa-solid fa-circle-info"></i>
+            Reuniões sob agendamento.
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- SOBRE -->
+    <section id="sobre">
+      <div class="container">
+        <h2 class="section-title">Sobre a Dev Mendes</h2>
+        <p class="section-subtitle">
+          Agência especializada em criação de sites com agendamento para negócios locais.
+        </p>
+
+        <div class="sobre-grid">
+          <div class="sobre-text">
+            <p>
+              A Dev Mendes cria sites leves, modernos e responsivos, focados em converter visitantes
+              em agendamentos reais pelo WhatsApp ou formulário.
+            </p>
+          </div>
+
+          <div class="sobre-adicionais">
+            <div class="sobre-card">
+              <div class="sobre-icon"><i class="fa-solid fa-laptop-code"></i></div>
+              <div>
+                <h3>Design Profissional</h3>
+                <p>Layouts modernos seguindo boas práticas de UX/UI.</p>
+              </div>
+            </div>
+
+            <div class="sobre-card">
+              <div class="sobre-icon"><i class="fa-regular fa-calendar-check"></i></div>
+              <div>
+                <h3>Agendamento Simples</h3>
+                <p>Integração com WhatsApp ou formulário nativo.</p>
+              </div>
+            </div>
+
+            <div class="sobre-card">
+              <div class="sobre-icon"><i class="fa-solid fa-rocket"></i></div>
+              <div>
+                <h3>Entrega Rápida</h3>
+                <p>Seu site publicado em poucos dias.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- PLANOS -->
+    <section id="planos">
+      <div class="container">
+        <h2 class="section-title">Tabela de Preços</h2>
+
+        <div class="planos-grid">
+
+          <!-- Plano 1 -->
+          <article class="plano-card">
+            <div class="plano-tag">Essencial</div>
+            <h3 class="plano-nome">Landing Page Agendamentos</h3>
+            <div class="plano-preco">R$ 29<span>/semana*</span></div>
+            <ul class="plano-itens">
+              <li><i class="fa-solid fa-check"></i> Site de 1 página</li>
+              <li><i class="fa-solid fa-check"></i> Botão WhatsApp fixo</li>
+              <li><i class="fa-solid fa-check"></i> Mapa integrado</li>
+            </ul>
+            <button class="btn btn-outline js-scroll-agendar">Agendar</button>
+          </article>
+
+          <!-- Plano 2 -->
+          <article class="plano-card plano-destaque">
+            <div class="plano-selo">Recomendado</div>
+            <div class="plano-tag">Completo</div>
+            <h3 class="plano-nome">Site Profissional</h3>
+            <div class="plano-preco">R$ 39<span>/semana*</span></div>
+            <ul class="plano-itens">
+              <li><i class="fa-solid fa-check"></i> Até 5 seções</li>
+              <li><i class="fa-solid fa-check"></i> Formulário de agendamento</li>
+              <li><i class="fa-solid fa-check"></i> Otimização básica</li>
+            </ul>
+            <button class="btn btn-primary js-scroll-agendar">Escolher Plano</button>
+          </article>
+
+          <!-- Plano 3 -->
+          <article class="plano-card">
+            <div class="plano-tag">Premium</div>
+            <h3 class="plano-nome">Experiência Avançada</h3>
+            <div class="plano-preco">R$ 49<span>/semana*</span></div>
+            <ul class="plano-itens">
+              <li><i class="fa-solid fa-check"></i> Layout totalmente custom</li>
+              <li><i class="fa-solid fa-check"></i> Integrações externas</li>
+            </ul>
+            <button class="btn btn-outline js-scroll-agendar">Conversar</button>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- GALERIA / PORTFÓLIO -->
+    <section id="espaco">
+      <div class="container">
+        <h2 class="section-title">Portfólio</h2>
+
+        <div class="espaco-grid">
+          <div class="espaco-item"></div>
+          <div class="espaco-item"></div>
+          <div class="espaco-item"></div>
+          <div class="espaco-item"></div>
+          <div class="espaco-item"></div>
+          <div class="espaco-item"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DEPOIMENTOS -->
+    <section id="depoimentos">
+      <div class="container">
+        <h2 class="section-title">Depoimentos</h2>
+
+        <div class="depoimentos-grid">
+          <article class="depo-card">
+            <h4 class="depo-nome">Ana Silva</h4>
+            <p class="depo-texto">"Meu salão ficou muito mais profissional."</p>
+          </article>
+
+          <article class="depo-card">
+            <h4 class="depo-nome">Carlos Lima</h4>
+            <p class="depo-texto">"Agendamento organizado e simples."</p>
+          </article>
+
+          <article class="depo-card">
+            <h4 class="depo-nome">Clínica Vida+</h4>
+            <p class="depo-texto">"Pacientes elogiam muito o site."</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- AGENDAMENTO -->
+    <section id="agendamento">
+      <div class="container">
+        <h2 class="section-title">Faça seu agendamento</h2>
+
+        <form class="form-agendamento" onsubmit="event.preventDefault(); enviarWhatsAppFormulario();">
+
+          <input type="text" id="nome" placeholder="Seu nome">
+          <input type="text" id="negocio" placeholder="Tipo de negócio">
+          <input type="date" id="data">
+          <input type="time" id="hora">
+
+          <textarea id="mensagem" placeholder="Mensagem adicional"></textarea>
+
+          <button class="btn btn-primary" type="submit">
+            <i class="fa-brands fa-whatsapp"></i>
+            Enviar para WhatsApp
+          </button>
+
+        </form>
+      </div>
+    </section>
+
+    <!-- MAPA -->
+    <section id="mapa">
+      <div class="container">
+        <h2 class="section-title">Nosso endereço</h2>
+
+        <iframe
+          loading="lazy"
+          allowfullscreen
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151">
+        </iframe>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <p>© 2025 Dev Mendes — Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- JS -->
+  <script src="script.js"></script>
 </body>
 </html>

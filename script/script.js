@@ -14,7 +14,7 @@ document.querySelectorAll(".js-scroll-agendar").forEach(btn => {
 });
 
 // NÚMERO DO WHATSAPP
-const WHATSAPP_NUMERO = "5511999999999"; // <-- coloque o seu número aqui!
+const WHATSAPP_NUMERO = "5511999999999"; // <-- Alterar numero depois!
 
 function montarMensagemWhatsApp() {
   const nome = document.getElementById("nome")?.value || "";

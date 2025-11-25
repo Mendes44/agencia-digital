@@ -561,6 +561,32 @@ section {
   font-weight: 500;
 }
 
+/* PORTFÓLIO — imagens individuais */
+.espaco-item:nth-child(1) {
+    background: url('../img/portfolio.jpg') center/cover no-repeat;
+}
+
+.espaco-item:nth-child(2) {
+    background: url('../img/portfolio.jpg') center/cover no-repeat;
+}
+
+.espaco-item:nth-child(3) {
+    background: url('../img/portfolio.jpg') center/cover no-repeat;
+}
+
+.espaco-item:nth-child(4) {
+    background: url('../img/portfolio.jpg') center/cover no-repeat;
+}
+
+.espaco-item:nth-child(5) {
+    background: url('../img/portfolio.jpg') center/cover no-repeat;
+}
+
+.espaco-item:nth-child(6) {
+    background: url('../img/portfolio.jpg') center/cover no-repeat;
+}
+
+
 
 /* ============================================================
    9. DEPOIMENTOS
@@ -580,6 +606,7 @@ section {
   padding: 1rem 1rem 1.1rem;
   box-shadow: 0 5px 15px rgba(15, 23, 42, 0.05);
   font-size: 0.8rem;
+  text-align: center;
 }
 
 /* Nome da pessoa do depoimento */
@@ -594,6 +621,18 @@ section {
   color: var(--muted);
   font-size: 0.8rem;
 }
+
+.depo-foto {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto 0.8rem;
+    border: 3px solid var(--primary);
+    box-shadow: var(--shadow-soft);
+}
+
+
 
 
 /* ============================================================

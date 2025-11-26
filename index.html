@@ -62,10 +62,23 @@
 
           <h1 class="hero-title">Sites profissionais para o seu negócio captar mais clientes.</h1>
 
-          <p class="hero-subtitle">
-            A <strong>Dev Mendes</strong> desenvolve landing pages e sites completos para qualquer negócio como:
-            barbearias, clínicas, petshops e empresas de serviços que precisam de agendamento online.
-          </p>
+          <div class="hero-carousel">
+
+            <p class="hero-slide active">
+              A <strong>Dev Mendes</strong> desenvolve landing pages e sites completos para qualquer negócio como:
+              barbearias, clínicas, petshops e empresas de serviços que precisam de agendamento online.
+            </p>
+            <p class="hero-slide">
+              Integração com WhatsApp ou formulários personalizados para facilitar o contato e agendamento de serviços.
+            </p>
+            <p class="hero-slide">
+              Sites responsivos, otimizados para SEO e com design moderno que impressionam seus clientes.
+            </p>
+            <p class="hero-slide">
+              Automação com robo de WhatsApp para confirmar agendamentos e reduzir contatos sem respostas.
+            </p>
+          
+          </div>
 
           <div class="hero-actions">
             <button class="btn btn-primary js-scroll-agendar">
@@ -95,50 +108,55 @@
     </section>
 
     <!-- SOBRE -->
-    <section id="sobre">
-      <div class="container">
-        <h2 class="section-title">Sobre a Dev Mendes</h2>
-        <p class="section-subtitle">
-          Agência especializada em criação de sites com agendamento para negócios locais.
-        </p>
+<section id="sobre" class="sobre-wrapper">
+  <h2 class="section-title reveal">Sobre a Dev Mendes</h2>
+  <p class="section-subtitle reveal">
+    Agência especializada em criação de sites com agendamento para negócios locais.
+  </p>
 
-        <div class="sobre-grid">
-          <div class="sobre-text">
-            <p>
-              A Dev Mendes cria sites leves, modernos e responsivos, focados em converter visitantes
-              em agendamentos reais pelo WhatsApp ou formulário.
-            </p>
-          </div>
+  <div class="sobre-grid">
+    
+    <!-- Bloco Esquerdo com imagem -->
+    <div class="sobre-text reveal">
+      <p>
+        A Dev Mendes cria sites leves, modernos e responsivos, focados em converter visitantes
+        em agendamentos reais pelo WhatsApp ou formulário.
+      </p>
+    </div>
 
-          <div class="sobre-adicionais">
-            <div class="sobre-card">
-              <div class="sobre-icon"><i class="fa-solid fa-laptop-code"></i></div>
-              <div>
-                <h3>Design Profissional</h3>
-                <p>Layouts modernos seguindo boas práticas!</p>
-              </div>
-            </div>
-
-            <div class="sobre-card">
-              <div class="sobre-icon"><i class="fa-regular fa-calendar-check"></i></div>
-              <div>
-                <h3>Agendamento Simples</h3>
-                <p>Integração com WhatsApp ou formulário!</p>
-              </div>
-            </div>
-
-            <div class="sobre-card">
-              <div class="sobre-icon"><i class="fa-solid fa-rocket"></i></div>
-              <div>
-                <h3>Entrega Rápida</h3>
-                <p>Seu site publicado em poucos dias!</p>
-              </div>
-            </div>
-          </div>
+    <!-- Bloco Direito -->
+    <div class="sobre-adicionais">
+      <div class="sobre-card reveal">
+        <div class="sobre-icon">📷</div>
+        <div>
+          <h3>Design Profissional</h3>
+          <p>Layouts modernos seguindo boas práticas de UX/UI.</p>
         </div>
-
       </div>
-    </section>
+
+      <div class="sobre-card reveal">
+        <div class="sobre-icon">📅</div>
+        <div>
+          <h3>Agendamento Simples</h3>
+          <p>Integração com WhatsApp ou formulário nativo.</p>
+        </div>
+      </div>
+
+      <div class="sobre-card reveal">
+        <div class="sobre-icon">⚡</div>
+        <div>
+          <h3>Entrega Rápida</h3>
+          <p>Seu site publicado em poucos dias.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+
 
     <!-- PLANOS -->
     <section id="planos">
@@ -287,5 +305,7 @@
 
   <!-- JS -->
   <script src="script/script.js"></script>
+  <script src="script/reveal.js"></script>
+  <script src="script/carousel.js"></script>
 </body>
 </html>

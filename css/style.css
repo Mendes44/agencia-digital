@@ -195,30 +195,55 @@ nav a:hover::after {
   gap: 0.8rem;
 }
 
-/* ===============================
-   Carrossel da hero (frases)
-   =============================== */
+/* ==========================================
+   Carrossel com Bolinhas (Dots)
+   ========================================== */
 
-.hero-carousel {
-  position: relative;
-  height: 90px; /* Mantém a área fixa para não pular */
+.hero-carousel-container {
+  width: 100%;
   overflow: hidden;
+  position: relative;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero-carousel-track {
+  display: flex;
+  transition: transform 0.6s ease;
 }
 
 .hero-slide {
-  position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 0;
+  min-width: 100%;
+  text-align: left;
   font-size: 1rem;
   color: var(--muted);
-  transition: opacity 0.8s ease;
+  padding-right: 1rem;
 }
 
-.hero-slide.active {
-  opacity: 1;
-  position: absolute;
+/* --- Bolinhas --- */
+.hero-carousel-dots {
+  display: flex;
+  justify-content: right;
+  gap: 0.45rem;
+  margin-top: 0.2rem;
 }
+
+.hero-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #cbd5e1; /* cinza claro */
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.hero-dot.active {
+  background: var(--primary); /* ativa em azul */
+  transform: scale(1.25);
+}
+
 
 
 /* Card lateral */
@@ -355,6 +380,7 @@ section {
   gap: 1.2rem;
 
   transition: transform .25s ease, box-shadow .25s ease;
+  cursor: pointer;
 }
 
 /* Hover suave premium */
@@ -498,6 +524,7 @@ section {
 .sobre-card:hover {
   transform: translateY(-3px);
   box-shadow: var(--shadow-hover);
+  cursor: pointer;
 }
 
 .sobre-icon {

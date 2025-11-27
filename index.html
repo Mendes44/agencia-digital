@@ -25,29 +25,51 @@
   </div>
 
   <!-- TOPO -->
-  <header id="topo">
-    <div class="topbar">
-      <div class="logo">
-        <img src="img/logo-transparente.png" alt="Dev Mendes Logo" />
-      </div>
-
-      <button class="menu-toggle" aria-label="Abrir menu">
-        <i class="fa-solid fa-bars"></i>
-      </button>
-
-      <nav>
-        <ul id="menu-links">
-          <li><a href="#inicio">Início</a></li>
-          <li><a href="#sobre">Sobre</a></li>
-          <li><a href="#planos">Planos</a></li>
-          <li><a href="#espaco">Portfólio</a></li>
-          <li><a href="#depoimentos">Depoimentos</a></li>
-          <li><a href="#agendamento">Agendamento</a></li>
-          <li><a href="#mapa">Mapa</a></li>
-        </ul>
-      </nav>
+<header id="topo">
+  <div class="topbar">
+    
+    <!-- LOGO -->
+    <div class="logo">
+      <img src="img/logo-transparente.png" alt="Dev Mendes Logo" />
     </div>
-  </header>
+
+    <!-- BOTÃO MENU MOBILE (HAMBÚRGUER) -->
+    <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu">
+      <span class="line"></span>
+      <span class="line"></span>
+      <span class="line"></span>
+    </button>
+
+    <!-- MENU MOBILE (overlay deslizando) -->
+    <nav class="mobile-menu" id="mobile-menu">
+      <ul>
+        <li><a href="#inicio">Início</a></li>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#planos">Planos</a></li>
+        <li><a href="#espaco">Portfólio</a></li>
+        <li><a href="#depoimentos">Depoimentos</a></li>
+        <li><a href="#agendamento">Agendamento</a></li>
+        <li><a href="#mapa">Mapa</a></li>
+      </ul>
+    </nav>
+
+    <!-- MENU DESKTOP -->
+    <nav class="menu-desktop">
+      <ul id="menu-links">
+        <li><a href="#inicio">Início</a></li>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#planos">Planos</a></li>
+        <li><a href="#espaco">Portfólio</a></li>
+        <li><a href="#depoimentos">Depoimentos</a></li>
+        <li><a href="#agendamento">Agendamento</a></li>
+        <li><a href="#mapa">Mapa</a></li>
+      </ul>
+    </nav>
+
+
+  </div>
+</header>
+
 
   <!-- SEÇÕES DO SITE (IDÊNTICAS À ANTERIOR) -->
   <!-- INÍCIO -->
@@ -309,5 +331,6 @@
   <script src="script/script.js"></script>
   <script src="script/reveal.js"></script>
   <script src="script/carousel.js"></script>
+  <script src="script/menu.js"></script>
 </body>
 </html>

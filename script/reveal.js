@@ -1,18 +1,19 @@
-console.log("Reveal.js carregado!");
+// ===============================
+// ANIMAÇÃO REVEAL AO ROLAR A TELA
+// ===============================
 
-const reveals = document.querySelectorAll(".reveal");
-console.log("Quantidade de .reveal encontrados:", reveals.length);
+function revelarElementos() {
+  const elementos = document.querySelectorAll(".reveal");
 
-function handleReveal() {
-  reveals.forEach(el => {
-    const rect = el.getBoundingClientRect().top;
-    const windowHeight = window.innerHeight * 0.85;
+  elementos.forEach((el) => {
+    const posicao = el.getBoundingClientRect().top;
+    const tamanhoTela = window.innerHeight * 0.85;
 
-    if (rect < windowHeight) {
+    if (posicao < tamanhoTela) {
       el.classList.add("active");
     }
   });
 }
 
-window.addEventListener("scroll", handleReveal);
-window.addEventListener("load", handleReveal);
+window.addEventListener("scroll", revelarElementos);
+window.addEventListener("load", revelarElementos);

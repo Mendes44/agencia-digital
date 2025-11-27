@@ -633,17 +633,30 @@ section {
   padding-top: 70%;
   position: relative;
   overflow: hidden;
+  width: 100%;
+  cursor: pointer;
+  box-shadow: var(--shadow-soft);
+
+  background-size: cover!important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
 }
 
 .espaco-item::after {
-  content: "Foto do espaço";
+  display: none;
+  content: "";
   position: absolute;
   inset: 0;
   font-size: 0.8rem;
   color: #9ca3af;
-  display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.espaco-item:hover::after {
+  display: flex;
+  background: rgba(107, 151, 141, 0.4);;
+  color: #f3f4f6;
 }
 
 /* ============================================================

@@ -76,6 +76,7 @@ A responsividade foi implementada manualmente com CSS puro, utilizando *breakpoi
 
 ## 📂 **Estrutura do Projeto**
 
+```sh
 .
 ├── index.html
 ├── css/
@@ -90,7 +91,7 @@ A responsividade foi implementada manualmente com CSS puro, utilizando *breakpoi
 │ ├── reveal.js
 │ └── script.js
 └── README.md
-
+```
 ---
 
 ## 🧠 **Aprendizados e Melhorias Implementadas**
@@ -123,10 +124,11 @@ Você pode escolher uma das duas opções:
 ```sh
 git clone https://github.com/seuusuario/dev-mendes-landingpage
 ```
+### **2 — Pode simplesmente acessar:**
 ```sh
-- 2 - Pode simplesmente acessar: https://dev-mendes.vercel.app/
+https://dev-mendes.vercel.app/
 ```
-![Descrição da imagem](img/demo.png.png)
+![Capa do Site - Demostração](./img/demo.png)
 
 ---
 

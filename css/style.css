@@ -655,7 +655,7 @@ section {
 
 .espaco-item:hover::after {
   display: flex;
-  background: rgba(107, 151, 141, 0.4);;
+  background: rgba(177, 189, 248, 0.4);
   color: #f3f4f6;
 }
 

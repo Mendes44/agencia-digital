@@ -2,20 +2,27 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8" />
-  <title>Dev Mendes • Agência de Tecnologia & Sites</title>
+  <title>Dev Mendes • Sites e Landing Pages para Pequenos Negócios</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="Criação de landing pages e sites profissionais para pequenos negócios no Brasil e em Portugal. Sites responsivos, com WhatsApp, formulário, SEO básico e manutenção mensal."
+  />
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
   <!-- Ícones FontAwesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+
   <!-- CSS -->
   <link rel="stylesheet" href="css/style.css" />
+
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="img/favicon3.png" />
 </head>
 
-<body>
+<body data-market="br">
   <!-- BOTÃO FIXO WHATSAPP -->
   <div class="whatsapp-fixo">
     <button type="button" class="js-whatsapp">
@@ -25,362 +32,614 @@
   </div>
 
   <!-- TOPO -->
-<header id="topo">
-  <div class="topbar">
-    
-    <!-- LOGO -->
-    <div class="logo">
-      <img src="img/logo-transparente.png" alt="Dev Mendes Logo" />
+  <header id="topo">
+    <div class="topbar">
+      <a href="#inicio" class="logo" aria-label="Dev Mendes - Início">
+        <img src="img/logo-transparente.png" alt="Dev Mendes Logo" />
+      </a>
+
+      <nav class="menu-desktop">
+        <ul id="menu-links">
+          <li><a href="#inicio">Início</a></li>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#servicos">Serviços</a></li>
+          <li><a href="#planos">Planos</a></li>
+          <li><a href="#portfolio">Portfólio</a></li>
+          <li><a href="#manutencao">Manutenção</a></li>
+          <li><a href="#depoimentos">Depoimentos</a></li>
+          <li><a href="#agendamento">Contato</a></li>
+        </ul>
+      </nav>
+
+      <div class="market-switch desktop-switch" aria-label="Selecionar mercado">
+        <button type="button" class="market-btn active" data-market-option="br">Brasil</button>
+        <button type="button" class="market-btn" data-market-option="pt">Portugal</button>
+      </div>
+
+      <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </button>
+
+      <nav class="mobile-menu" id="mobile-menu">
+        <ul>
+          <li><a href="#inicio">Início</a></li>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#servicos">Serviços</a></li>
+          <li><a href="#planos">Planos</a></li>
+          <li><a href="#portfolio">Portfólio</a></li>
+          <li><a href="#manutencao">Manutenção</a></li>
+          <li><a href="#depoimentos">Depoimentos</a></li>
+          <li><a href="#agendamento">Contato</a></li>
+        </ul>
+
+        <div class="market-switch mobile-switch" aria-label="Selecionar mercado">
+          <button type="button" class="market-btn active" data-market-option="br">Brasil</button>
+          <button type="button" class="market-btn" data-market-option="pt">Portugal</button>
+        </div>
+      </nav>
     </div>
+  </header>
 
-    <!-- BOTÃO MENU MOBILE (HAMBÚRGUER) -->
-    <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu">
-      <span class="line"></span>
-      <span class="line"></span>
-      <span class="line"></span>
-    </button>
-
-    <!-- MENU MOBILE (overlay deslizando) -->
-    <nav class="mobile-menu" id="mobile-menu">
-      <ul>
-        <li><a href="#inicio">Início</a></li>
-        <li><a href="#sobre">Sobre</a></li>
-        <li><a href="#planos">Planos</a></li>
-        <li><a href="#espaco">Portfólio</a></li>
-        <li><a href="#depoimentos">Depoimentos</a></li>
-        <li><a href="#agendamento">Agendamento</a></li>
-        <li><a href="#mapa">Mapa</a></li>
-      </ul>
-    </nav>
-
-    <!-- MENU DESKTOP -->
-    <nav class="menu-desktop link-footer">
-      <ul id="menu-links">
-        <li><a href="#inicio">Início</a></li>
-        <li><a href="#sobre">Sobre</a></li>
-        <li><a href="#planos">Planos</a></li>
-        <li><a href="#espaco">Portfólio</a></li>
-        <li><a href="#depoimentos">Depoimentos</a></li>
-        <li><a href="#agendamento">Agendamento</a></li>
-        <li><a href="#mapa">Mapa</a></li>
-      </ul>
-    </nav>
-
-
-  </div>
-</header>
-
-
-  <!-- SEÇÕES DO SITE (IDÊNTICAS À ANTERIOR) -->
-  <!-- INÍCIO -->
   <main id="inicio">
+    <!-- HERO -->
     <section class="hero">
       <div class="container hero-inner">
-        <div>
+        <div class="hero-content reveal">
           <div class="hero-badge">
             <i class="fa-solid fa-bolt"></i>
-            Agência de Tecenologia & Sites
+            Sites, landing pages e presença digital
           </div>
 
-          <h1 class="hero-title">Sites profissionais para o seu negócio captar mais clientes.</h1>
+          <h1 class="hero-title">
+            Sites profissionais para pequenos negócios venderem mais pelo WhatsApp.
+          </h1>
 
-          <div class="hero-carousel-container">
+          <div class="hero-carousel-container" aria-label="Destaques da Dev Mendes">
             <div class="hero-carousel-track">
               <p class="hero-slide">
-                A <strong>Dev Mendes</strong> desenvolve landing pages e sites completos para qualquer negócio como:
-                barbearias, clínicas, petshops e empresas de serviços que precisam de agendamento online.
+                Criamos landing pages e sites rápidos, responsivos e personalizados para clínicas, salões, petshops, cafeterias, consultórios e prestadores de serviço.
               </p>
+
               <p class="hero-slide">
-                Integração com WhatsApp ou formulários personalizados para facilitar o contato e agendamento de serviços.
+                Seu cliente entende seus serviços, vê seus diferenciais e chama no WhatsApp com mais confiança.
               </p>
+
               <p class="hero-slide">
-                Sites responsivos, otimizados para SEO e com design moderno que impressionam seus clientes.
+                Estruturamos páginas com foco em conversão: apresentação, serviços, prova visual, localização, perguntas frequentes e chamada para ação.
               </p>
+
               <p class="hero-slide">
-                Automação com robo de WhatsApp para confirmar agendamentos e reduzir contatos sem respostas.
+                Também oferecemos manutenção mensal para manter seu site atualizado, funcionando e alinhado às mudanças do seu negócio.
               </p>
             </div>
-          <!-- Dots-->
-           <div class="hero-carousel-dots"></div>
+
+            <div class="hero-carousel-dots"></div>
           </div>
 
           <div class="hero-actions">
             <button class="btn btn-primary js-scroll-agendar">
-              <i class="fa-regular fa-calendar-check"></i>
-              Agendar conversa
+              <i class="fa-brands fa-whatsapp"></i>
+              Solicitar orçamento
             </button>
 
-            <button class="btn btn-outline" onclick="document.querySelector('#espaco').scrollIntoView({behavior:'smooth'})">
-              Ver projetos
+            <button class="btn btn-outline" onclick="document.querySelector('#portfolio').scrollIntoView({behavior:'smooth'})">
+              Ver modelos de sites
             </button>
           </div>
+
+          <p class="hero-note">
+            Atendimento online para clientes do Brasil e de Portugal.
+          </p>
         </div>
 
-        <aside class="hero-contact-card">
-          <h3>Dados de contato e endereço</h3>
-          <p><strong>E-mail:</strong> marcosmendes.dev@devmendes.com</p>
-          <p><strong>WhatsApp:</strong> (11) 99999-9999</p>
-          <p><strong>Endereço:</strong> 123 Collins Street, Melbourne</p>
-          <p><strong>Atendimento:</strong> Seg–Sex, 9h—18h</p>
+        <aside class="hero-contact-card reveal">
+          <h3>Vamos conversar sobre seu site?</h3>
+          <p>
+            Antes de passar um valor fechado, entendemos o tipo de negócio, objetivo da página e recursos necessários.
+          </p>
+
+          <div class="contact-list">
+            <p><strong>E-mail:</strong> marcosmendes.dev@gmail.com</p>
+            <p><strong>WhatsApp:</strong> +55 31 98734-0462</p>
+            <p><strong>Atendimento:</strong> online, sob agendamento</p>
+            <p><strong>Mercado selecionado:</strong> <span id="market-label">Brasil</span></p>
+          </div>
 
           <div class="hero-contact-pill">
             <i class="fa-solid fa-circle-info"></i>
-            Reuniões sob agendamento.
+            Projetos sob medida, com proposta antes do início.
           </div>
         </aside>
       </div>
     </section>
 
     <!-- SOBRE -->
-<section id="sobre" class="sobre-wrapper">
-  <h2 class="section-title reveal">Sobre a Dev Mendes</h2>
-  <p class="section-subtitle reveal">
-    Agência especializada em criação de sites com agendamento para negócios locais.
-  </p>
-
-  <div class="sobre-grid">
-    
-    <!-- Bloco Esquerdo com imagem -->
-    <div class="sobre-text reveal">
-      <p>
-        A Dev Mendes cria sites leves, modernos e responsivos, focados em converter visitantes
-        em agendamentos reais pelo WhatsApp ou formulário.
-      </p>
-    </div>
-
-    <!-- Bloco Direito -->
-    <div class="sobre-adicionais">
-      <div class="sobre-card reveal">
-        <div class="sobre-icon">📷</div>
-        <div>
-          <h3>Design Profissional</h3>
-          <p>Layouts modernos seguindo boas práticas!.</p>
-        </div>
-      </div>
-
-      <div class="sobre-card reveal">
-        <div class="sobre-icon">📅</div>
-        <div>
-          <h3>Agendamento Simples</h3>
-          <p>Integração com WhatsApp ou formulário nativo.</p>
-        </div>
-      </div>
-
-      <div class="sobre-card reveal">
-        <div class="sobre-icon">⚡</div>
-        <div>
-          <h3>Entrega e Resposta Rápida</h3>
-          <p>Usando robo para automatizar seu negócio, seu cliente nunca ficará esperando.</p>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-
-    <!-- PLANOS -->
-    <section id="planos">
+    <section id="sobre" class="sobre-wrapper">
       <div class="container">
-        <h2 class="section-title">Tabela de Preços</h2>
+        <h2 class="section-title reveal">Sobre a Dev Mendes</h2>
+        <p class="section-subtitle reveal">
+          Desenvolvemos sites leves, claros e pensados para transformar visitantes em contatos reais.
+        </p>
 
-        <div class="planos-grid">
+        <div class="sobre-grid">
+          <div class="sobre-text reveal">
+            <p>
+              A Dev Mendes ajuda pequenos negócios a terem uma presença digital mais profissional. Criamos páginas que explicam o que você faz, mostram seus serviços e facilitam o contato pelo WhatsApp, formulário ou agendamento.
+            </p>
+          </div>
 
-          <!-- Plano 1 -->
-          <article class="plano-card">
-            <div class="plano-tag">Essencial</div>
-            <h3 class="plano-nome">Landing Page Agendamentos</h3>
-            <div class="plano-preco">R$ 29<span>/semana*</span></div>
-            <ul class="plano-itens">
-              <li><i class="fa-solid fa-check"></i> Site de 1 página</li>
-              <li><i class="fa-solid fa-check"></i> Botão WhatsApp fixo</li>
-              <li><i class="fa-solid fa-check"></i> Mapa integrado</li>
-            </ul>
-            <button class="btn btn-outline js-scroll-agendar">Escolher Plano</button>
-          </article>
+          <div class="sobre-adicionais">
+            <div class="sobre-card reveal">
+              <div class="sobre-icon">
+                <i class="fa-solid fa-mobile-screen-button"></i>
+              </div>
+              <div>
+                <h3>Responsivo para celular</h3>
+                <p>O site se adapta para celular, tablet e computador, priorizando a experiência do cliente.</p>
+              </div>
+            </div>
 
-          <!-- Plano 2 -->
-          <article class="plano-card plano-destaque">
-            <div class="plano-selo">Recomendado</div>
-            <div class="plano-tag">Completo</div>
-            <h3 class="plano-nome">Site Profissional</h3>
-            <div class="plano-preco">R$ 39<span>/semana*</span></div>
-            <ul class="plano-itens">
-              <li><i class="fa-solid fa-check"></i> Até 5 seções</li>
-              <li><i class="fa-solid fa-check"></i> Formulário de agendamento</li>
-              <li><i class="fa-solid fa-check"></i> Otimização básica</li>
-            </ul>
-            <button class="btn btn-primary js-scroll-agendar">Escolher Plano</button>
-          </article>
+            <div class="sobre-card reveal">
+              <div class="sobre-icon">
+                <i class="fa-brands fa-whatsapp"></i>
+              </div>
+              <div>
+                <h3>Foco em conversão</h3>
+                <p>Botões estratégicos para WhatsApp, formulário, localização e chamada para orçamento.</p>
+              </div>
+            </div>
 
-          <!-- Plano 3 -->
-          <article class="plano-card">
-            <div class="plano-tag">Premium</div>
-            <h3 class="plano-nome">Experiência Avançada</h3>
-            <div class="plano-preco">R$ 49<span>/semana*</span></div>
-            <ul class="plano-itens">
-              <li><i class="fa-solid fa-check"></i> Layout totalmente custom</li>
-              <li><i class="fa-solid fa-check"></i> Integrações externas</li>
-            </ul>
-            <button class="btn btn-outline js-scroll-agendar">Escolher Plano</button>
-          </article>
-
+            <div class="sobre-card reveal">
+              <div class="sobre-icon">
+                <i class="fa-solid fa-chart-line"></i>
+              </div>
+              <div>
+                <h3>Visão de marketing</h3>
+                <p>Não criamos apenas páginas bonitas: organizamos a comunicação para gerar mais confiança.</p>
+              </div>
+            </div>
+          </div>
         </div>
-
       </div>
     </section>
 
-    <!-- GALERIA / PORTFÓLIO -->
-    <section id="espaco">
+    <!-- SERVIÇOS -->
+    <section id="servicos" class="section-white">
       <div class="container">
-        <h2 class="section-title">Portfólio</h2>
+        <h2 class="section-title reveal">O que podemos criar</h2>
+        <p class="section-subtitle reveal">
+          Soluções práticas para negócios que precisam vender, captar contatos ou parecer mais profissionais online.
+        </p>
 
-        <div class="espaco-grid">
-          <a href="https://petlegal.vercel.app/" target="_blank" title="PetLegal">
-            <div class="espaco-item" style="background-image: url('img/Projeto1.png');"></div>
+        <div class="servicos-grid">
+          <article class="servico-card reveal">
+            <i class="fa-solid fa-window-maximize"></i>
+            <h3>Landing Pages</h3>
+            <p>Páginas únicas para apresentar um serviço, captar leads ou receber contatos pelo WhatsApp.</p>
+          </article>
+
+          <article class="servico-card reveal">
+            <i class="fa-solid fa-globe"></i>
+            <h3>Sites Institucionais</h3>
+            <p>Sites com seções ou páginas para apresentar empresa, serviços, equipe, diferenciais e contato.</p>
+          </article>
+
+          <article class="servico-card reveal">
+            <i class="fa-solid fa-calendar-check"></i>
+            <h3>Agendamento e Formulários</h3>
+            <p>Estruturas simples para o cliente enviar interesse, pedido de orçamento ou solicitação de reunião.</p>
+          </article>
+
+          <article class="servico-card reveal">
+            <i class="fa-solid fa-screwdriver-wrench"></i>
+            <h3>Manutenção Mensal</h3>
+            <p>Atualizações, pequenos ajustes, troca de fotos, textos, links e melhorias contínuas no site.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMO FUNCIONA -->
+    <section id="processo">
+      <div class="container">
+        <h2 class="section-title reveal">Como funciona</h2>
+        <p class="section-subtitle reveal">
+          Um processo simples para tirar seu site do papel sem complicação.
+        </p>
+
+        <div class="processo-grid">
+          <article class="processo-card reveal">
+            <span>1</span>
+            <h3>Diagnóstico</h3>
+            <p>Entendemos seu negócio, público, objetivo do site e canais de contato.</p>
+          </article>
+
+          <article class="processo-card reveal">
+            <span>2</span>
+            <h3>Proposta</h3>
+            <p>Você recebe um escopo com valor, prazo, entregas e condições de pagamento.</p>
+          </article>
+
+          <article class="processo-card reveal">
+            <span>3</span>
+            <h3>Criação</h3>
+            <p>Desenvolvemos o layout, organizamos os textos e montamos a página responsiva.</p>
+          </article>
+
+          <article class="processo-card reveal">
+            <span>4</span>
+            <h3>Publicação</h3>
+            <p>Após aprovação, o site é publicado e você pode seguir com suporte mensal.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PLANOS -->
+    <section id="planos" class="section-white">
+      <div class="container">
+        <h2 class="section-title reveal">Planos e valores</h2>
+        <p class="section-subtitle reveal">
+          Os valores abaixo são referências iniciais. O orçamento final depende do escopo, quantidade de páginas e integrações.
+        </p>
+
+        <div class="planos-grid">
+          <article class="plano-card reveal">
+            <div class="plano-tag">Essencial</div>
+            <h3 class="plano-nome">Landing Page Simples</h3>
+            <div
+              class="plano-preco js-price"
+              data-price-br="A partir de R$ 1.200"
+              data-price-pt="A partir de €450"
+            >
+              A partir de R$ 1.200
+            </div>
+
+            <ul class="plano-itens">
+              <li><i class="fa-solid fa-check"></i> Página única profissional</li>
+              <li><i class="fa-solid fa-check"></i> Design responsivo</li>
+              <li><i class="fa-solid fa-check"></i> Botão de WhatsApp</li>
+              <li><i class="fa-solid fa-check"></i> Seções de serviços e contato</li>
+              <li><i class="fa-solid fa-check"></i> Publicação online</li>
+            </ul>
+
+            <button class="btn btn-outline js-plan-whatsapp" data-plan="Landing Page Simples">
+              Pedir orçamento
+            </button>
+          </article>
+
+          <article class="plano-card plano-destaque reveal">
+            <div class="plano-selo">Mais indicado</div>
+            <div class="plano-tag">Profissional</div>
+            <h3 class="plano-nome">Landing Page Estratégica</h3>
+            <div
+              class="plano-preco js-price"
+              data-price-br="A partir de R$ 2.500"
+              data-price-pt="A partir de €850"
+            >
+              A partir de R$ 2.500
+            </div>
+
+            <ul class="plano-itens">
+              <li><i class="fa-solid fa-check"></i> Estrutura com foco em conversão</li>
+              <li><i class="fa-solid fa-check"></i> Copy comercial organizada</li>
+              <li><i class="fa-solid fa-check"></i> WhatsApp, formulário ou agendamento</li>
+              <li><i class="fa-solid fa-check"></i> SEO básico</li>
+              <li><i class="fa-solid fa-check"></i> Até 2 rodadas de ajustes</li>
+            </ul>
+
+            <button class="btn btn-primary js-plan-whatsapp" data-plan="Landing Page Estratégica">
+              Quero este plano
+            </button>
+          </article>
+
+          <article class="plano-card reveal">
+            <div class="plano-tag">Completo</div>
+            <h3 class="plano-nome">Site Institucional</h3>
+            <div
+              class="plano-preco js-price"
+              data-price-br="A partir de R$ 4.500"
+              data-price-pt="A partir de €1.800"
+            >
+              A partir de R$ 4.500
+            </div>
+
+            <ul class="plano-itens">
+              <li><i class="fa-solid fa-check"></i> Site com múltiplas páginas ou seções</li>
+              <li><i class="fa-solid fa-check"></i> Página inicial, sobre, serviços e contato</li>
+              <li><i class="fa-solid fa-check"></i> Formulário e WhatsApp</li>
+              <li><i class="fa-solid fa-check"></i> Estrutura mais completa para negócios</li>
+              <li><i class="fa-solid fa-check"></i> Publicação e suporte inicial</li>
+            </ul>
+
+            <button class="btn btn-outline js-plan-whatsapp" data-plan="Site Institucional">
+              Pedir orçamento
+            </button>
+          </article>
+        </div>
+
+        <p class="planos-observacao reveal">
+          Pagamento recomendado: 50% para iniciar e 50% antes da publicação. Projetos maiores podem ser parcelados conforme escopo.
+        </p>
+      </div>
+    </section>
+
+    <!-- PORTFÓLIO -->
+    <section id="portfolio">
+      <div class="container">
+        <h2 class="section-title reveal">Portfólio e modelos demonstrativos</h2>
+        <p class="section-subtitle reveal">
+          Exemplos de páginas criadas para diferentes segmentos. Cada projeto pode ser adaptado para a identidade e necessidade do cliente.
+        </p>
+
+        <div class="portfolio-grid">
+          <a class="portfolio-card reveal" href="https://petlegal.vercel.app/" target="_blank" rel="noopener">
+            <div class="portfolio-img" style="background-image: url('img/Projeto1.png');"></div>
+            <div class="portfolio-info">
+              <h3>Pet Shop</h3>
+              <p>Modelo com serviços, apresentação, contato rápido e visual amigável.</p>
+              <span>Ver projeto <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+            </div>
           </a>
-          <a href=https://clinica-medica-psi.vercel.app/" target="_blank" title="Clinica Medica">
-            <div class="espaco-item" style="background-image: url('img/Projeto4.png');"></div>
+
+          <a class="portfolio-card reveal" href="https://clinica-medica-psi.vercel.app/" target="_blank" rel="noopener">
+            <div class="portfolio-img" style="background-image: url('img/Projeto4.png');"></div>
+            <div class="portfolio-info">
+              <h3>Clínica Médica</h3>
+              <p>Estrutura para serviços, especialidades, agendamento e credibilidade.</p>
+              <span>Ver projeto <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+            </div>
           </a>
-          <a href="https://cafeteria-site-rho.vercel.app/" target="_blank" title="Cafeteria">
-            <div class="espaco-item" style="background-image: url('img/Projeto5.png');"></div>
+
+          <a class="portfolio-card reveal" href="https://cafeteria-site-rho.vercel.app/" target="_blank" rel="noopener">
+            <div class="portfolio-img" style="background-image: url('img/Projeto5.png');"></div>
+            <div class="portfolio-info">
+              <h3>Cafeteria</h3>
+              <p>Modelo visual para negócios locais com cardápio, endereço e horários.</p>
+              <span>Ver projeto <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+            </div>
           </a>
-          <a href="https://site-pousada-umber.vercel.app/" target="_blank" title="Pousada Secreta">
-            <div class="espaco-item" style="background-image: url('img/Projeto6.png');"></div>
+
+          <a class="portfolio-card reveal" href="https://site-pousada-umber.vercel.app/" target="_blank" rel="noopener">
+            <div class="portfolio-img" style="background-image: url('img/Projeto6.png');"></div>
+            <div class="portfolio-info">
+              <h3>Pousada</h3>
+              <p>Modelo para hospedagem, fotos, descrição de experiência e contato.</p>
+              <span>Ver projeto <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+            </div>
           </a>
-          <a href="https://petshop-boutique.vercel.app/" target="_blank" title="Petshop Boutique">
-            <div class="espaco-item" style="background-image: url('img/Projeto3.png');"></div>
+
+          <a class="portfolio-card reveal" href="https://petshop-boutique.vercel.app/" target="_blank" rel="noopener">
+            <div class="portfolio-img" style="background-image: url('img/Projeto3.png');"></div>
+            <div class="portfolio-info">
+              <h3>Pet Boutique</h3>
+              <p>Site com estética mais premium para apresentar produtos e serviços.</p>
+              <span>Ver projeto <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+            </div>
           </a>
-          <a href="https://agencia-de-viagem-one.vercel.app/" target="_blank" title="Agência de Viagem">
-            <div class="espaco-item" style="background-image: url('img/Projeto2.png');"></div>
+
+          <a class="portfolio-card reveal" href="https://agencia-de-viagem-one.vercel.app/" target="_blank" rel="noopener">
+            <div class="portfolio-img" style="background-image: url('img/Projeto2.png');"></div>
+            <div class="portfolio-info">
+              <h3>Agência de Viagem</h3>
+              <p>Modelo para pacotes, destinos, fotos e chamada para orçamento.</p>
+              <span>Ver projeto <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+            </div>
           </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- MANUTENÇÃO -->
+    <section id="manutencao" class="section-white">
+      <div class="container">
+        <h2 class="section-title reveal">Manutenção mensal</h2>
+        <p class="section-subtitle reveal">
+          Depois que o site está no ar, ele precisa continuar atualizado. A manutenção evita que o cliente precise contratar alguém do zero a cada pequena mudança.
+        </p>
+
+        <div class="manutencao-box reveal">
+          <div>
+            <h3>Por que contratar manutenção?</h3>
+            <p>
+              Negócios mudam horários, fotos, preços, serviços, campanhas, links e informações de contato. Com a manutenção mensal, seu site continua funcionando e acompanhando essas mudanças.
+            </p>
+          </div>
+
+          <div class="manutencao-price">
+            <span>Manutenção a partir de</span>
+            <strong
+              class="js-price"
+              data-price-br="R$ 350/mês"
+              data-price-pt="€120/mês"
+            >
+              R$ 350/mês
+            </strong>
+          </div>
+        </div>
+
+        <div class="manutencao-grid">
+          <article class="manutencao-card reveal">
+            <h3>Básica</h3>
+            <p
+              class="manutencao-valor js-price"
+              data-price-br="R$ 350/mês"
+              data-price-pt="€120/mês"
+            >
+              R$ 350/mês
+            </p>
+            <ul>
+              <li>Pequenos ajustes de texto</li>
+              <li>Troca de fotos</li>
+              <li>Correção de links</li>
+              <li>Verificação mensal do site</li>
+              <li>Suporte por WhatsApp</li>
+            </ul>
+          </article>
+
+          <article class="manutencao-card destaque reveal">
+            <h3>Profissional</h3>
+            <p
+              class="manutencao-valor js-price"
+              data-price-br="R$ 600/mês"
+              data-price-pt="€200/mês"
+            >
+              R$ 600/mês
+            </p>
+            <ul>
+              <li>Tudo do plano básico</li>
+              <li>Até 3 alterações mensais</li>
+              <li>Atualização de serviços ou preços</li>
+              <li>Ajustes em seções existentes</li>
+              <li>Relatório simples de visitas/cliques</li>
+            </ul>
+          </article>
+
+          <article class="manutencao-card reveal">
+            <h3>Growth</h3>
+            <p
+              class="manutencao-valor js-price"
+              data-price-br="A partir de R$ 900/mês"
+              data-price-pt="A partir de €300/mês"
+            >
+              A partir de R$ 900/mês
+            </p>
+            <ul>
+              <li>Melhorias mensais de conversão</li>
+              <li>Novas seções ou páginas pequenas</li>
+              <li>Apoio em campanhas</li>
+              <li>Landing pages sazonais</li>
+              <li>Suporte prioritário</li>
+            </ul>
+          </article>
         </div>
       </div>
     </section>
 
     <!-- DEPOIMENTOS -->
-    <section id="depoimentos">
-      <div class="container">
-        <h2 class="section-title">Depoimentos</h2>
+<section id="depoimentos">
+  <div class="container">
+    <h2 class="section-title reveal">O que dizem sobre os projetos</h2>
+    <p class="section-subtitle reveal">
+      Feedbacks de clientes e projetos que mostram como um site bem estruturado ajuda pequenos negócios a parecerem mais profissionais e receberem mais contatos.
+    </p>
 
-        <div class="depoimentos-grid">
-          <article class="depo-card">
-            <img src="img/client1.jpg" alt="Ana Silva" class="depo-foto">
-            <h4 class="depo-nome">Ana Silva</h4>
-            <p class="depo-texto">"Meu salão ficou muito mais profissional."</p>
-        </article>
-        
-        <article class="depo-card">
-              <img src="img/client2.jpg" alt="Ana Silva" class="depo-foto">
-              <h4 class="depo-nome">Carlos Lima</h4>
-              <p class="depo-texto">"Agendamento organizado e simples."</p>
-            </article>
-            
-            <article class="depo-card">
-            <img src="img/client3.jpg" alt="Ana Silva" class="depo-foto">
-            <h4 class="depo-nome">Clínica Vida+</h4>
-            <p class="depo-texto">"Pacientes elogiam muito o site."</p>
-          </article>
-        </div>
-      </div>
-    </section>
+    <div class="depoimentos-grid">
+      <article class="depo-card reveal">
+        <img src="img/client1.jpg" alt="Cliente de salão de beleza" class="depo-foto" />
+        <h4 class="depo-nome">Ana Silva</h4>
+        <p class="depo-segmento">Salão de beleza</p>
+        <p class="depo-texto">
+          “Meu salão ficou muito mais profissional. Agora consigo enviar uma página bonita para as clientes conhecerem meus serviços antes de chamar no WhatsApp.”
+        </p>
+      </article>
 
-    <!-- AGENDAMENTO -->
+      <article class="depo-card reveal">
+        <img src="img/client2.jpg" alt="Cliente prestador de serviço" class="depo-foto" />
+        <h4 class="depo-nome">Carlos Lima</h4>
+        <p class="depo-segmento">Prestador de serviço</p>
+        <p class="depo-texto">
+          “Antes eu explicava tudo manualmente. Com o site, o cliente já entende o que eu faço, vê meus serviços e chega mais decidido para pedir orçamento.”
+        </p>
+      </article>
+
+      <article class="depo-card reveal">
+        <img src="img/client3.jpg" alt="Cliente de clínica" class="depo-foto" />
+        <h4 class="depo-nome">Clínica Vida+</h4>
+        <p class="depo-segmento">Clínica e atendimento</p>
+        <p class="depo-texto">
+          “O site deixou nossa comunicação mais clara e passou mais confiança para os pacientes. A integração com WhatsApp facilitou bastante o contato.”
+        </p>
+      </article>
+    </div>
+  </div>
+</section>
+
+    <!-- CONTATO / AGENDAMENTO -->
     <section id="agendamento">
       <div class="container">
-        <h2 class="section-title">Faça seu agendamento</h2>
+        <h2 class="section-title reveal">Solicite um orçamento</h2>
+        <p class="section-subtitle reveal">
+          Preencha as informações abaixo e envie direto para o WhatsApp. Vamos avaliar seu caso e indicar o melhor formato de site.
+        </p>
 
-        <form class="form-agendamento" onsubmit="event.preventDefault(); enviarWhatsAppFormulario();">
-
-          <input type="text" id="nome" placeholder="Seu nome">
-          <input type="text" id="negocio" placeholder="Tipo de negócio">
-          <input type="date" id="data">
-          <input type="time" id="hora">
-
-          <textarea id="mensagem" placeholder="Mensagem adicional"></textarea>
+        <form class="form-agendamento reveal" onsubmit="event.preventDefault(); enviarWhatsAppFormulario();">
+          <input type="text" id="nome" placeholder="Seu nome" required />
+          <input type="text" id="negocio" placeholder="Tipo de negócio" required />
+          <input type="text" id="objetivo" placeholder="Objetivo do site: vender, agendar, apresentar serviços..." />
+          <select id="interesse">
+            <option value="">Tenho interesse em...</option>
+            <option value="Landing Page Simples">Landing Page Simples</option>
+            <option value="Landing Page Estratégica">Landing Page Estratégica</option>
+            <option value="Site Institucional">Site Institucional</option>
+            <option value="Manutenção Mensal">Manutenção Mensal</option>
+            <option value="Ainda não sei">Ainda não sei qual plano escolher</option>
+          </select>
+          <textarea id="mensagem" placeholder="Conte um pouco sobre o que você precisa"></textarea>
 
           <button class="btn btn-primary" type="submit">
             <i class="fa-brands fa-whatsapp"></i>
             Enviar para WhatsApp
           </button>
-
         </form>
       </div>
     </section>
-
-    <!-- MAPA -->
-    <section id="mapa">
-      <div class="container">
-        <h2 class="section-title">Nosso endereço</h2>
-
-        <iframe
-          loading="lazy"
-          allowfullscreen
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509249!2d144.9690976153169!3d-37.81720994358302!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0x5045675218ce6e0!2sFederation%20Square!5e0!3m2!1sen!2sau!4v1710000000000" 
-                width="600" 
-                height="450" 
-                style="border:0;" 
-                allowfullscreen="" 
-                loading="lazy" 
-                referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
-      </div>
-    </section>
-
   </main>
 
   <!-- FOOTER -->
- <footer class="footer">
-  <div class="container footer-grid">
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <img src="img/logo.png" class="footer-logo" alt="Dev Mendes" />
+        <p class="footer-desc">
+          Criação de sites, landing pages, automação e manutenção digital para pequenos negócios.
+        </p>
+      </div>
 
-    <!-- COLUNA 1 – Identidade -->
-    <div class="footer-col">
-      <img src="img/logo.png" class="footer-logo" alt="Dev Mendes">
-      <p class="footer-desc">
-        Agência especializada em tecnologia, sites, automação e gestão de tráfico para negócios locais.
-      </p>
-    </div>
+      <div class="footer-col">
+        <h4>Contato</h4>
+        <p><strong>E-mail:</strong> marcosmendes.dev@gmail.com</p>
+        <p><strong>WhatsApp:</strong> +55 31 98734-0462</p>
+        <p><strong>Atendimento:</strong> online para Brasil e Portugal</p>
+        <p><strong>Base:</strong> Belo Horizonte/MG</p>
+      </div>
 
-    <!-- COLUNA 2 – Contato -->
-    <div class="footer-col">
-      <h4>Contato</h4>
-      <p><strong>E-mail:</strong> marcosmendes.dev@devmendes.com</p>
-      <p><strong>WhatsApp:</strong> (11) 99999-9999</p>
-      <p><strong>Endereço:</strong> 123 Collins Street, Melbourne</p>
-      <p><strong>Atendimento:</strong> Seg–Sex, 9h–18h</p>
-    </div>
+      <div class="footer-col">
+        <h4>Navegação</h4>
+        <ul>
+          <li><a href="#inicio">Início</a></li>
+          <li><a href="#servicos">Serviços</a></li>
+          <li><a href="#planos">Planos</a></li>
+          <li><a href="#portfolio">Portfólio</a></li>
+          <li><a href="#manutencao">Manutenção</a></li>
+        </ul>
+      </div>
 
-    <!-- COLUNA 3 – Links rápidos -->
-    <div class="footer-col">
-      <h4>Navegação</h4>
-      <ul>
-        <li><a href="#inicio">Início</a></li>
-        <li><a href="#sobre">Sobre</a></li>
-        <li><a href="#planos">Planos</a></li>
-        <li><a href="#espaco">Portfólio</a></li>
-        <li><a href="#agendamento">Agendamento</a></li>
-      </ul>
-    </div>
-
-    <!-- COLUNA 4 – Redes sociais -->
-    <div class="footer-col">
-      <h4>Redes Sociais</h4>
-      <div class="footer-social">
-        <a href="https://www.instagram.com/marcosmendes44/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-        <a href="https://wa.me/5511999999999?text=Olá%2C+vim+pelo+site+Dev+Mendes!" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
-        <a href="https://www.linkedin.com/in/marcosmendes44/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-        <a href="https://github.com/Mendes44/Mendes44/tree/main" target="_blank"><i class="fa-brands fa-github"></i></a>
+      <div class="footer-col">
+        <h4>Redes Sociais</h4>
+        <div class="footer-social">
+          <a href="https://www.instagram.com/marcosmendes44/" target="_blank" rel="noopener" aria-label="Instagram">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a href="https://wa.me/5531987340462?text=Olá%2C+vim+pelo+site+Dev+Mendes!" target="_blank" rel="noopener" aria-label="WhatsApp">
+            <i class="fa-brands fa-whatsapp"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/marcosmendes44/" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <i class="fa-brands fa-linkedin"></i>
+          </a>
+          <a href="https://github.com/Mendes44/Mendes44/tree/main" target="_blank" rel="noopener" aria-label="GitHub">
+            <i class="fa-brands fa-github"></i>
+          </a>
+        </div>
       </div>
     </div>
 
-  </div>
-
-  <div class="footer-copy">
-    © 2025 Dev Mendes — Todos os direitos reservados.
-  </div>
-</footer>
-
-
+    <div class="footer-copy">
+      © 2026 Dev Mendes — Todos os direitos reservados.
+    </div>
+  </footer>
 
   <!-- JS -->
   <script src="script/script.js"></script>

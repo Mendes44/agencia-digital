@@ -1,44 +1,42 @@
 /* ============================================================
-   STYLE.CSS – Dev Mendes Agência de Tecnologia
-   Autor: Marcos Mendes
+   STYLE.CSS – Dev Mendes
    ============================================================ */
 
-/* ============================================================
-   1. VARIÁVEIS GLOBAIS
-   ============================================================ */
 :root {
   --primary: #2563eb;
+  --primary-dark: #1d4ed8;
   --primary-soft: #e0ecff;
   --secondary: #10b981;
   --accent: #f97316;
 
-  --bg: #f5f5f7;
-  --text: #1f2933;
+  --bg: #f5f7fb;
+  --text: #1f2937;
   --muted: #6b7280;
+  --border: #e5e7eb;
 
   --card-bg: #ffffff;
-  --radius-lg: 14px;
+  --radius-lg: 18px;
 
-  --shadow-soft: 0 8px 22px rgba(0, 0, 0, 0.06);
-  --shadow-hover: 0 14px 32px rgba(0, 0, 0, 0.12);
+  --shadow-soft: 0 8px 22px rgba(15, 23, 42, 0.06);
+  --shadow-hover: 0 16px 36px rgba(15, 23, 42, 0.12);
 }
 
-/* ============================================================
-   2. RESET & ESTILO BASE
-   ============================================================ */
+/* RESET */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-html,
-body {
+html {
+  scroll-behavior: smooth;
   width: 100%;
-  overflow-x: hidden; /* evita qualquer scroll horizontal */
+  overflow-x: hidden;
 }
 
 body {
+  width: 100%;
+  overflow-x: hidden;
   background: var(--bg);
   color: var(--text);
   font-family: "Poppins", sans-serif;
@@ -55,18 +53,23 @@ a {
   color: inherit;
 }
 
+button,
+input,
+textarea,
+select {
+  font-family: inherit;
+}
+
 .container {
   width: 100%;
-  max-width: 1080px;
+  max-width: 1120px;
   margin: 0 auto;
   padding: 0 1.4rem;
 }
 
-/* ============================================================
-   3. BOTÕES GERAIS
-   ============================================================ */
+/* BOTÕES */
 .btn {
-  padding: 0.75rem 1.5rem;
+  padding: 0.8rem 1.5rem;
   border-radius: 999px;
   font-weight: 600;
   font-size: 0.95rem;
@@ -86,6 +89,7 @@ a {
 }
 
 .btn-primary:hover {
+  background: var(--primary-dark);
   transform: translateY(-2px);
   box-shadow: var(--shadow-hover);
 }
@@ -101,26 +105,23 @@ a {
   transform: translateY(-2px);
 }
 
-/* ============================================================
-   4. HEADER + NAVEGAÇÃO
-   ============================================================ */
-
-/* Barra fixa no topo */
+/* HEADER */
 header {
-  background: #fff;
+  background: rgba(255, 255, 255, 0.96);
   position: sticky;
   top: 0;
   z-index: 50;
   box-shadow: 0 2px 10px rgba(15, 23, 42, 0.06);
+  backdrop-filter: blur(12px);
 }
 
-/* Conteúdo do topo: logo + menus */
 .topbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 1.2rem;
   padding: 0.9rem 1.5rem;
-  max-width: 1080px;
+  max-width: 1120px;
   margin: 0 auto;
 }
 
@@ -130,14 +131,11 @@ header {
   width: auto;
 }
 
-/* ------------------------------
-   MENU DESKTOP (somente telas grandes)
-   ------------------------------ */
 .menu-desktop ul {
   list-style: none;
   display: flex;
-  gap: 1.3rem;
-  font-size: 0.95rem;
+  gap: 1.2rem;
+  font-size: 0.92rem;
 }
 
 .menu-desktop a {
@@ -165,84 +163,89 @@ header {
   width: 100%;
 }
 
-/* ============================
-   BOTÃO HAMBÚRGUER CORRIGIDO
-   ============================ */
+/* SELETOR BRASIL / PORTUGAL */
+.market-switch {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.25rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: #f8fafc;
+}
 
-/* Oculto no desktop */
+.market-btn {
+  border: none;
+  background: transparent;
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.market-btn.active {
+  background: var(--primary);
+  color: #fff;
+}
+
+.mobile-switch {
+  display: none;
+}
+
+/* MENU MOBILE */
 .menu-toggle {
-    display: none;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  width: 34px;
+  height: 34px;
+  padding: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 3000;
 }
 
-/* Mobile */
-@media (max-width: 900px) {
-
-  .menu-toggle {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 4px;
-
-    width: 32px;
-    height: 32px;
-    padding: 0;
-    margin: 0;
-
-    background: none;
-    border: none;
-    cursor: pointer;
-    z-index: 3000; /* sobrepõe tudo */
-  }
-
-  .menu-toggle .line {
-    width: 100%;
-    height: 3px;
-    background: #1e293b;
-    border-radius: 4px;
-    transition: all 0.3s ease;
-  }
-
-  /* ANIMAÇÃO DO ÍCONE */
-  .menu-toggle.active .line:nth-child(1) {
-    transform: translateY(6px) rotate(45deg);
-  }
-  .menu-toggle.active .line:nth-child(2) {
-    opacity: 0;
-  }
-  .menu-toggle.active .line:nth-child(3) {
-    transform: translateY(-6px) rotate(-45deg);
-  }
-
-  /* Esconde menu desktop */
-  .menu-desktop {
-    display: none !important;
-  }
+.menu-toggle .line {
+  width: 100%;
+  height: 3px;
+  background: #1e293b;
+  border-radius: 4px;
+  transition: all 0.3s ease;
 }
 
-/* ============================
-   MENU MOBILE CORRIGIDO
-   ============================ */
+.menu-toggle.active .line:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.menu-toggle.active .line:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.active .line:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
 
 .mobile-menu {
   position: fixed;
   top: 0;
   right: -100%;
-
-  width: 70%;
-  max-width: 300px;
+  width: 78%;
+  max-width: 330px;
   height: 100vh;
-
   background: #ffffff;
   padding: 5rem 2rem;
-
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-
-  box-shadow: -4px 0 14px rgba(0,0,0,0.15);
+  box-shadow: -4px 0 14px rgba(0, 0, 0, 0.15);
   transition: right 0.35s ease;
-  z-index: 2500;  /* abaixo do botão, acima do site */
+  z-index: 2500;
 }
 
 .mobile-menu.open {
@@ -257,72 +260,53 @@ header {
 }
 
 .mobile-menu a {
-  font-size: 1.15rem;
+  font-size: 1.1rem;
   font-weight: 600;
   color: #1f2937;
 }
 
-/* ============================================================
-   5. SEÇÃO HERO (INÍCIO)
-   ============================================================ */
+/* HERO */
 .hero {
-  background: #fff;
-  padding: 4rem 0 3.5rem;
-  border-bottom: 1px solid #e5e7eb;
+  background:
+    radial-gradient(circle at top left, rgba(37, 99, 235, 0.12), transparent 32%),
+    linear-gradient(135deg, #ffffff 0%, #f8fbff 100%);
+  padding: 4.5rem 0 4rem;
+  border-bottom: 1px solid var(--border);
 }
 
 .hero-inner {
   display: grid;
-  grid-template-columns: 2fr 1.5fr;
+  grid-template-columns: 1.7fr 1fr;
   gap: 2.5rem;
   align-items: center;
 }
 
-/* Selo acima do título */
 .hero-badge {
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
   background: var(--primary-soft);
   color: var(--primary);
-  padding: 0.3rem 0.75rem;
+  padding: 0.35rem 0.8rem;
   border-radius: 999px;
-  font-size: 0.8rem;
-  font-weight: 600;
-  margin-bottom: 0.9rem;
-}
-
-/* Título principal */
-.hero-title {
-  font-size: clamp(2rem, 3.5vw, 2.7rem);
-  margin-bottom: 0.7rem;
+  font-size: 0.82rem;
   font-weight: 700;
+  margin-bottom: 1rem;
 }
 
-/* Subtexto (carrossel) usa hero-slide, então aqui só base */
-.hero-subtitle {
-  color: var(--muted);
-  font-size: 1rem;
-  margin-bottom: 1.7rem;
+.hero-title {
+  font-size: clamp(2rem, 4vw, 3.15rem);
+  line-height: 1.12;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  color: #111827;
 }
-
-/* Ações (botões) */
-.hero-actions {
-  margin-top: 1.6rem;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.8rem;
-}
-
-/* ------------------------------
-   Carrossel de textos + bolinhas
-   ------------------------------ */
 
 .hero-carousel-container {
   width: 100%;
   overflow: hidden;
   position: relative;
-  height: 100px;
+  min-height: 110px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -336,22 +320,22 @@ header {
 .hero-slide {
   min-width: 100%;
   text-align: left;
-  font-size: 1rem;
+  font-size: 1.02rem;
   color: var(--muted);
   padding-right: 1rem;
 }
 
-/* Bolinhas (dots) */
 .hero-carousel-dots {
   display: flex;
   justify-content: flex-start;
   gap: 0.45rem;
-  margin-top: 0.4rem;
+  margin-top: 0.7rem;
 }
 
 .hero-dot {
   width: 10px;
   height: 10px;
+  border: none;
   border-radius: 50%;
   background: #cbd5e1;
   cursor: pointer;
@@ -363,74 +347,95 @@ header {
   transform: scale(1.25);
 }
 
-/* Card lateral com dados de contato */
-.hero-contact-card {
-  background: #fafbff;
-  padding: 1.4rem;
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-soft);
+.hero-actions {
+  margin-top: 1.6rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.hero-note {
+  margin-top: 1rem;
+  color: var(--muted);
   font-size: 0.9rem;
 }
 
+.hero-contact-card {
+  background: #ffffff;
+  padding: 1.6rem;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+  border: 1px solid rgba(37, 99, 235, 0.09);
+  font-size: 0.92rem;
+}
+
 .hero-contact-card h3 {
-  font-size: 1rem;
-  margin-bottom: 0.45rem;
+  font-size: 1.15rem;
+  margin-bottom: 0.5rem;
+  color: #111827;
 }
 
-.hero-contact-card p + p {
-  margin-top: 0.2rem;
+.hero-contact-card > p {
+  color: var(--muted);
+  margin-bottom: 1rem;
 }
 
-/* Pílula dentro do card */
+.contact-list {
+  display: grid;
+  gap: 0.35rem;
+}
+
 .hero-contact-pill {
   margin-top: 1rem;
-  padding: 0.4rem 0.9rem;
+  padding: 0.55rem 0.9rem;
   border-radius: 999px;
-  background: #fff;
+  background: #f8fafc;
   border: 1px dashed #d4d4d8;
-  font-size: 0.78rem;
+  color: #475569;
+  font-size: 0.8rem;
   display: inline-flex;
   align-items: center;
   gap: 0.35rem;
 }
 
-/* ============================================================
-   6. TÍTULOS DE SEÇÃO
-   ============================================================ */
+/* SEÇÕES */
 section {
-  padding: 4rem 0;
+  padding: 4.5rem 0;
+}
+
+.section-white {
+  background: #fff;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
 }
 
 .section-title {
   text-align: center;
-  font-size: 2.4rem;
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
   color: #1e293b;
   margin-bottom: 0.6rem;
 }
 
 .section-subtitle {
   text-align: center;
-  max-width: 480px;
+  max-width: 680px;
   margin: 0 auto 3rem;
   color: var(--muted);
-  font-size: 1.15rem;
+  font-size: 1rem;
 }
 
-/* ============================================================
-   7. SEÇÃO SOBRE
-   ============================================================ */
+/* SOBRE */
 .sobre-wrapper {
   padding: 5rem 0;
 }
 
 .sobre-grid {
   display: grid;
-  grid-template-columns: 1.4fr 1fr;
-  gap: 2.5rem;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 2rem;
   align-items: stretch;
 }
 
-/* Bloco esquerdo em vidro fosco */
 .sobre-text {
   position: relative;
   padding: 3.2rem;
@@ -438,7 +443,9 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: inset 0 0 18px rgba(255, 255, 255, 0.35);
+  overflow: hidden;
+  box-shadow: var(--shadow-soft);
+  background: #ffffff;
 }
 
 .sobre-text::before {
@@ -446,8 +453,7 @@ section {
   position: absolute;
   inset: 0;
   background: url("../img/sobre-bg.jpg") center/cover no-repeat;
-  opacity: 0.85;
-  border-radius: 22px;
+  opacity: 0.45;
   z-index: 1;
 }
 
@@ -455,9 +461,8 @@ section {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(255, 255, 255, 0.72);
+  background: rgba(255, 255, 255, 0.78);
   backdrop-filter: blur(8px);
-  border-radius: 22px;
   z-index: 2;
 }
 
@@ -465,17 +470,16 @@ section {
   position: relative;
   z-index: 3;
   max-width: 650px;
-  font-size: 1.2rem;
+  font-size: 1.15rem;
   text-align: center;
-  color: #475569;
-  line-height: 1.7;
+  color: #334155;
+  line-height: 1.75;
   font-weight: 500;
 }
 
-/* Cards da direita */
 .sobre-adicionais {
   display: grid;
-  gap: 1.3rem;
+  gap: 1.2rem;
 }
 
 .sobre-card {
@@ -492,11 +496,10 @@ section {
 .sobre-card:hover {
   transform: translateY(-3px);
   box-shadow: var(--shadow-hover);
-  cursor: pointer;
 }
 
 .sobre-icon {
-  width: 48px;
+  min-width: 48px;
   height: 48px;
   background: var(--primary-soft);
   color: var(--primary);
@@ -504,11 +507,11 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
 }
 
 .sobre-card h3 {
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   margin-bottom: 0.25rem;
   font-weight: 600;
 }
@@ -518,9 +521,79 @@ section {
   font-size: 0.9rem;
 }
 
-/* ============================================================
-   8. TABELA DE PLANOS
-   ============================================================ */
+/* SERVIÇOS */
+.servicos-grid,
+.processo-grid,
+.manutencao-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1.2rem;
+}
+
+.servico-card,
+.processo-card,
+.manutencao-card {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 18px;
+  box-shadow: var(--shadow-soft);
+  border: 1px solid #eef2f7;
+  transition: 0.25s ease;
+}
+
+.section-white .servico-card,
+.section-white .manutencao-card {
+  background: #f8fafc;
+}
+
+.servico-card:hover,
+.processo-card:hover,
+.manutencao-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+}
+
+.servico-card i {
+  color: var(--primary);
+  font-size: 1.7rem;
+  margin-bottom: 1rem;
+}
+
+.servico-card h3,
+.processo-card h3,
+.manutencao-card h3 {
+  font-size: 1.08rem;
+  color: #111827;
+  margin-bottom: 0.45rem;
+}
+
+.servico-card p,
+.processo-card p,
+.manutencao-card p,
+.manutencao-card li {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+/* PROCESSO */
+.processo-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.processo-card span {
+  width: 42px;
+  height: 42px;
+  background: var(--primary);
+  color: #fff;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  margin-bottom: 0.9rem;
+}
+
+/* PLANOS */
 .planos-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -538,9 +611,8 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1.2rem;
+  gap: 1.1rem;
   transition: transform 0.25s ease, box-shadow 0.25s ease;
-  cursor: pointer;
 }
 
 .plano-card:hover {
@@ -552,52 +624,49 @@ section {
   font-size: 0.8rem;
   letter-spacing: 0.07em;
   text-transform: uppercase;
-  font-weight: 600;
+  font-weight: 700;
   color: var(--primary);
 }
 
 .plano-nome {
-  font-size: 1.25rem;
+  font-size: 1.22rem;
   font-weight: 700;
   color: #1e293b;
 }
 
 .plano-preco {
-  font-size: 2rem;
+  font-size: 1.45rem;
+  line-height: 1.25;
   font-weight: 700;
   color: var(--primary);
-}
-
-.plano-preco span {
-  font-size: 0.9rem;
-  color: var(--muted);
-  font-weight: 500;
+  min-height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .plano-itens {
   list-style: none;
   text-align: left;
   width: 100%;
-  max-width: 260px;
-  margin: 0 auto;
   color: var(--muted);
   font-size: 0.9rem;
   display: grid;
-  gap: 0.4rem;
+  gap: 0.55rem;
 }
 
 .plano-itens li {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 0.5rem;
 }
 
 .plano-itens i {
   color: var(--secondary);
   font-size: 0.8rem;
+  margin-top: 0.27rem;
 }
 
-/* Plano destaque */
 .plano-destaque {
   border: 2px solid var(--primary);
   box-shadow: 0 16px 30px rgba(37, 99, 235, 0.22);
@@ -609,7 +678,7 @@ section {
   top: -12px;
   right: 1rem;
   padding: 0.35rem 0.7rem;
-  font-size: 0.75rem;
+  font-size: 0.72rem;
   font-weight: 700;
   background: var(--primary);
   color: #fff;
@@ -618,50 +687,137 @@ section {
   letter-spacing: 0.06em;
 }
 
-/* ============================================================
-   9. PORTFÓLIO
-   ============================================================ */
-.espaco-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1rem;
+.planos-observacao {
+  text-align: center;
+  max-width: 720px;
+  color: var(--muted);
+  margin: 2rem auto 0;
+  font-size: 0.92rem;
 }
 
-.espaco-item {
-  background: #e5e7eb;
-  border-radius: 16px;
-  padding-top: 70%;
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-  cursor: pointer;
-  box-shadow: var(--shadow-soft);
+/* PORTFÓLIO */
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.3rem;
+}
 
-  background-size: cover!important;
+.portfolio-card {
+  background: #fff;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: var(--shadow-soft);
+  border: 1px solid #eef2f7;
+  transition: 0.25s ease;
+}
+
+.portfolio-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-hover);
+}
+
+.portfolio-img {
+  background: #e5e7eb;
+  padding-top: 62%;
+  background-size: cover !important;
   background-position: center !important;
   background-repeat: no-repeat !important;
 }
 
-.espaco-item::after {
-  display: none;
-  content: "";
-  position: absolute;
-  inset: 0;
-  font-size: 0.8rem;
-  color: #9ca3af;
-  align-items: center;
-  justify-content: center;
+.portfolio-info {
+  padding: 1.1rem;
 }
 
-.espaco-item:hover::after {
-  display: flex;
-  background: rgba(177, 189, 248, 0.4);
-  color: #f3f4f6;
+.portfolio-info h3 {
+  color: #111827;
+  font-size: 1.05rem;
+  margin-bottom: 0.35rem;
+}
+
+.portfolio-info p {
+  color: var(--muted);
+  font-size: 0.88rem;
+  margin-bottom: 0.75rem;
+}
+
+.portfolio-info span {
+  color: var(--primary);
+  font-weight: 700;
+  font-size: 0.86rem;
+}
+
+/* MANUTENÇÃO */
+.manutencao-box {
+  background: linear-gradient(135deg, #eff6ff 0%, #ffffff 100%);
+  border: 1px solid #dbeafe;
+  border-radius: 22px;
+  padding: 2rem;
+  margin-bottom: 1.5rem;
+  display: grid;
+  grid-template-columns: 1.5fr 0.8fr;
+  gap: 1.5rem;
+  align-items: center;
+  box-shadow: var(--shadow-soft);
+}
+
+.manutencao-box h3 {
+  color: #111827;
+  margin-bottom: 0.4rem;
+}
+
+.manutencao-box p {
+  color: var(--muted);
+}
+
+.manutencao-price {
+  background: #fff;
+  border-radius: 18px;
+  padding: 1.3rem;
+  text-align: center;
+  box-shadow: var(--shadow-soft);
+}
+
+.manutencao-price span {
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.manutencao-price strong {
+  display: block;
+  color: var(--primary);
+  font-size: 1.55rem;
+  margin-top: 0.3rem;
+}
+
+.manutencao-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.manutencao-card {
+  background: #fff;
+}
+
+.manutencao-card.destaque {
+  border: 2px solid var(--primary);
+}
+
+.manutencao-valor {
+  color: var(--primary) !important;
+  font-size: 1.25rem !important;
+  font-weight: 700;
+  margin-bottom: 0.8rem;
+}
+
+.manutencao-card ul {
+  padding-left: 1.1rem;
+  display: grid;
+  gap: 0.4rem;
 }
 
 /* ============================================================
-   10. DEPOIMENTOS
+   DEPOIMENTOS
    ============================================================ */
+
 .depoimentos-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -670,203 +826,173 @@ section {
 
 .depo-card {
   background: #fff;
-  border-radius: 16px;
-  padding: 1.1rem 1.2rem;
+  border-radius: 18px;
+  padding: 1.4rem 1.2rem;
   text-align: center;
   box-shadow: var(--shadow-soft);
+  border: 1px solid #eef2f7;
+  transition: 0.25s ease;
+}
+
+.depo-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
 }
 
 .depo-foto {
   width: 72px;
   height: 72px;
+  max-width: 72px;
+  min-width: 72px;
   border-radius: 50%;
   object-fit: cover;
+  object-position: center;
   border: 3px solid var(--primary);
   margin: 0 auto 0.8rem;
+  display: block;
 }
 
 .depo-nome {
-  font-size: 0.9rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 0.2rem;
+}
+
+.depo-segmento {
+  font-size: 0.78rem;
   font-weight: 600;
+  color: var(--primary);
+  margin-bottom: 0.7rem;
 }
 
 .depo-texto {
   color: var(--muted);
-  font-size: 0.85rem;
+  font-size: 0.88rem;
+  line-height: 1.6;
 }
 
-/* ============================================================
-   11. FORMULÁRIO DE AGENDAMENTO
-   ============================================================ */
+/* Responsivo */
+@media (max-width: 980px) {
+  .depoimentos-grid {
+    grid-template-columns: 1fr;
+    max-width: 520px;
+    margin: 0 auto;
+  }
+}
+
+/* FORMULÁRIO */
 .form-agendamento {
   display: grid;
   gap: 0.9rem;
-  max-width: 480px;
+  max-width: 560px;
   margin: 0 auto;
 }
 
 .form-agendamento input,
-.form-agendamento textarea {
-  padding: 0.65rem 0.8rem;
-  border-radius: 10px;
+.form-agendamento textarea,
+.form-agendamento select {
+  padding: 0.78rem 0.9rem;
+  border-radius: 12px;
   border: 1px solid #d1d5db;
-  font-size: 0.9rem;
+  font-size: 0.92rem;
   transition: 0.25s ease;
-  font-family: inherit;
+  background: #fff;
+  color: var(--text);
 }
 
 .form-agendamento textarea {
-  min-height: 90px;
+  min-height: 110px;
   resize: vertical;
 }
 
 .form-agendamento input:focus,
-.form-agendamento textarea:focus {
+.form-agendamento textarea:focus,
+.form-agendamento select:focus {
   border-color: var(--primary);
   box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.18);
   outline: none;
 }
 
-/* ============================================================
-   12. MAPA
-   ============================================================ */
-#mapa iframe {
-  width: 100%;
-  height: 260px;
-  border: 0;
-  border-radius: 12px;
-  box-shadow: var(--shadow-soft);
-}
-
-/* ============================================================
-   13. FOOTER
-   ============================================================ */
-/*footer {
-  background: #111827;
-  color: #9ca3af;
-  padding: 1.6rem 0 1rem;
-  text-align: center;
-  font-size: 0.85rem;
-}*/
-
+/* FOOTER */
 .footer {
   background: #111827;
   color: #d1d5db;
   padding: 3rem 0 1.5rem;
-  margin-top: 4rem;
 }
 
 .footer-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 2.5rem;
+  grid-template-columns: 1.2fr 1.2fr 0.8fr 0.8fr;
+  gap: 2.2rem;
 }
 
 .footer-logo {
   width: 150px;
   margin-bottom: 1rem;
-  margin: 0 auto;
 }
 
 .footer-desc {
   font-size: 0.9rem;
   color: #9ca3af;
-  line-height: 1.5;
-  max-width: 240px;
-  text-align: center;
-  padding: 5px;
+  line-height: 1.6;
+  max-width: 260px;
 }
-
 
 .footer-col h4 {
   color: #fff;
   font-size: 1rem;
   margin-bottom: 1rem;
   font-weight: 600;
-  text-align: center;
+}
+
+.footer-col p,
+.footer-col li a {
+  color: #d1d5db;
+  font-size: 0.88rem;
+  margin-bottom: 0.45rem;
 }
 
 .footer-col ul {
   list-style: none;
-  text-align: center;
-  margin: 0 auto;
 }
 
 .footer-col li a {
-  color: #d1d5db;
-  font-size: 0.9rem;
   display: block;
-  margin-bottom: 0.5rem;
   transition: 0.3s;
-
-  margin: 0 auto;
-  text-align: center;
 }
 
 .footer-col li a:hover {
-  color: var(--primary);
+  color: #93c5fd;
   transform: translateX(4px);
-}
-
-.footer-social a {
-  font-size: 1.4rem;
-  color: #fff;
-  margin-right: 0.8rem;
-  transition: 0.3s;
-}
-
-.footer-social a:hover {
-  color: var(--primary);
 }
 
 .footer-social {
   display: flex;
-  justify-content: center;
+  gap: 0.85rem;
   margin-top: 1rem;
+}
+
+.footer-social a {
+  font-size: 1.35rem;
+  color: #fff;
+  transition: 0.3s;
+}
+
+.footer-social a:hover {
+  color: #93c5fd;
 }
 
 .footer-copy {
   margin-top: 2.5rem;
   text-align: center;
-  font-size: 0.85rem;
+  font-size: 0.82rem;
   color: #9ca3af;
   border-top: 1px solid #1f2937;
   padding-top: 1rem;
 }
 
-
-/* RESPONSIVO */
-@media (max-width: 900px) {
-  .footer-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-@media (max-width: 600px) {
-  .footer-grid {
-    grid-template-columns: 1fr;
-    text-align: center;
-  }
-
-  .footer-col {
-    margin-bottom: 1.5rem;
-  }
-
-  .footer-social {
-    justify-content: center;
-    display: flex;
-  }
-
-  .footer-desc {
-    margin: 0 auto 1rem;
-  }
-
-}
-
-
-/* ============================================================
-   14. BOTÃO WHATSAPP FIXO
-   ============================================================ */
+/* WHATSAPP FIXO */
 .whatsapp-fixo {
   position: fixed;
   bottom: 1.3rem;
@@ -880,13 +1006,14 @@ section {
   padding: 0.75rem 1rem;
   border-radius: 999px;
   border: none;
-  font-weight: 600;
+  font-weight: 700;
   font-size: 0.9rem;
   display: flex;
   align-items: center;
   gap: 0.45rem;
   box-shadow: 0 15px 26px rgba(22, 163, 74, 0.45);
   transition: 0.25s ease;
+  cursor: pointer;
 }
 
 .whatsapp-fixo button:hover {
@@ -894,9 +1021,7 @@ section {
   transform: translateY(-3px);
 }
 
-/* ============================================================
-   15. ANIMAÇÃO REVEAL
-   ============================================================ */
+/* REVEAL */
 .reveal {
   opacity: 0;
   transform: translateY(45px);
@@ -913,358 +1038,167 @@ section {
   filter: blur(0);
 }
 
-/* ============================================================
-   16. RESPONSIVIDADE (TABLET E MOBILE)
-   ============================================================ */
+/* RESPONSIVO */
+@media (max-width: 980px) {
+  .desktop-switch {
+    display: none;
+  }
 
-/* --------- até 900px (tablet & celular grande) --------- */
-@media (max-width: 900px) {
-  /* Header */
+  .mobile-switch {
+    display: inline-flex;
+    margin-top: 2rem;
+  }
+
   .menu-desktop {
-    display: none;           /* esconde menu desktop */
+    display: none;
   }
 
   .menu-toggle {
-    display: block;          /* mostra hambúrguer */
-  }
-
-  /* Hero / Início */
-  .hero {
-    padding: 2rem 1rem;
-  }
-
-  .hero-inner {
-    grid-template-columns: 1fr !important;
-    width: 100% !important;
     display: flex;
-    flex-direction: column;
-    text-align: center;
-    gap: 1.8rem;
   }
 
-  .hero-inner > div,
-  .hero-contact-card {
-    width: 100% !important;
+  .hero-inner,
+  .sobre-grid,
+  .manutencao-box {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    padding: 3rem 0;
+  }
+
+  .hero-content,
+  .hero-slide {
+    text-align: center;
   }
 
   .hero-badge {
-    margin: 0 auto 1rem;
+    margin-left: auto;
+    margin-right: auto;
   }
 
-  .hero-title {
-    text-align: center;
-    font-size: 1.65rem !important;
-    line-height: 1.3;
-  }
-
-  .hero-subtitle,
-  .hero-slide {
-    text-align: center !important;
-    width: 100% !important;
-    margin: 0 auto;
-  }
-
-  .hero-carousel-container {
-    height: auto;
-    margin-top: 0.4rem;
-  }
-
-  .hero-slide {
-    text-align: center;
-    padding-right: 0;
-  }
-
-  .hero-carousel-dots {
-    justify-content: center;
-  }
-
+  .hero-carousel-dots,
   .hero-actions {
     justify-content: center;
   }
 
   .hero-contact-card {
-    margin-top: 1.5rem;
+    max-width: 560px;
+    margin: 0 auto;
   }
 
-  /* Sobre */
-  .sobre-grid {
+  .servicos-grid,
+  .processo-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .planos-grid,
+  .portfolio-grid,
+  .manutencao-grid {
     grid-template-columns: 1fr;
+    max-width: 520px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
-  .sobre-text {
-    padding: 2.4rem;
+  .plano-destaque {
+    transform: none;
   }
 
-  /* Planos */
-  .planos-grid {
-    grid-template-columns: 1fr;
-    max-width: 420px;
-    margin: 2rem auto 0;
-  }
-
-  /* Depoimentos / Portfólio */
-  .depoimentos-grid,
-  .espaco-grid {
+  .footer-grid {
     grid-template-columns: 1fr 1fr;
   }
 }
 
-/* --------- até 640px (celular) --------- */
 @media (max-width: 640px) {
+  .topbar {
+    padding: 0.8rem 1rem;
+  }
+
+  .logo img {
+    height: 40px;
+  }
+
   section {
-    padding: 2.8rem 0;
+    padding: 3.2rem 0;
   }
 
   .hero-title {
-    font-size: 1.75rem;
+    font-size: 1.8rem;
+  }
+
+  .hero-carousel-container {
+    min-height: 145px;
   }
 
   .hero-actions .btn {
     width: 100%;
   }
 
-  .depoimentos-grid,
-  .espaco-grid {
+  .servicos-grid,
+  .processo-grid {
     grid-template-columns: 1fr;
+  }
+
+  .sobre-text {
+    padding: 2rem 1.3rem;
+  }
+
+  .sobre-text p {
+    font-size: 1rem;
+  }
+
+  .sobre-card {
+    flex-direction: column;
+  }
+
+  .mobile-menu {
+    width: 100%;
+    max-width: none;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .footer-logo,
+  .footer-desc {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .footer-social {
+    justify-content: center;
   }
 
   .whatsapp-fixo {
     right: 1rem;
     bottom: 1rem;
   }
+
+  .whatsapp-fixo button {
+    font-size: 0.82rem;
+    padding: 0.65rem 0.85rem;
+  }
 }
 
-/* ============================================================
-   🟦 RESPONSIVIDADE GLOBAL
-   ============================================================ */
-
-/* ============================
-   900px — Tablets e celulares
-   ============================ */
-@media (max-width: 900px) {
-
-  /* ---- TOPO / HEADER ---- */
-  .topbar {
-    padding: 0.8rem 1rem;
-  }
-
-  .logo img {
-    height: 42px;
-  }
-
-  /* Mostrar botão mobile */
-  .menu-toggle {
-    display: flex;
-  }
-
-  /* Esconder menu desktop */
-  .menu-desktop {
-    display: none;
-  }
-
-  /* ---- MENU MOBILE ---- */
-  .mobile-menu {
-    width: 100%;
-    right: -100%;
-    padding: 5rem 2rem;
-  }
-
-  .mobile-menu ul {
-    gap: 1.8rem;
-    font-size: 1.3rem;
-  }
-
-  .mobile-menu a {
-    font-weight: 600;
-  }
-
-  /* ---- HERO ---- */
-  .hero {
-    padding: 2.5rem 0;
-  }
-
-  .hero-inner {
-    grid-template-columns: 1fr;
-    text-align: center;
-    gap: 2rem;
-  }
-
-  .hero-badge {
-    margin: 0 auto;
-    font-size: 0.78rem;
-  }
-
-  .hero-title {
-    font-size: 1.9rem;
-    line-height: 1.25;
-    margin-bottom: 1rem;
-  }
-
-  .hero-subtitle {
-    font-size: 1rem;
-  }
-
-  .hero-actions {
-    justify-content: center;
-  }
-
-  /* Carrossel */
-  .hero-carousel-container {
-    margin-top: 0.5rem;
-    height: auto;
-  }
-
-  .hero-carousel-dots {
-    justify-content: center;
-  }
-
-  /* Card lateral */
-  .hero-contact-card {
-    margin: 0 auto;
-    width: 100%;
-    max-width: 420px;
-  }
-
-  /* ---- SEÇÃO SOBRE ---- */
-  .sobre-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .sobre-text {
-    padding: 2rem 1.4rem;
-    min-height: 200px;
-  }
-
-  /* ---- PLANOS ---- */
-  .planos-grid {
-    grid-template-columns: 1fr;
-    max-width: 420px;
-    margin: 0 auto;
-  }
-
-  /* ---- GALERIA ---- */
-  .espaco-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 0.8rem;
-  }
-
-  /* ---- DEPOIMENTOS ---- */
-  .depoimentos-grid {
-    grid-template-columns: 1fr;
-  }
-
-  /* ---- FORM ---- */
-  .form-agendamento {
-    width: 100%;
+@media (max-width: 420px) {
+  .container {
     padding: 0 1rem;
   }
 
-  /* ---- MAPA ---- */
-  #mapa iframe {
-    height: 220px;
-  }
-
-  /* ---- WHATSAPP ---- */
-  .whatsapp-fixo button {
-    font-size: 0.85rem;
-    padding: 0.6rem 0.9rem;
-  }
-}
-
-/* ============================
-   640px — celulares menores
-   ============================ */
-@media (max-width: 640px) {
-
-  /* Header */
-  .logo img {
-    height: 38px;
-  }
-
-  /* Botão hamburguer */
-  .menu-toggle {
-    width: 24px;
-    height: 20px;
-    gap: 3px;
-  }
-
-  .menu-toggle .line {
-    height: 2.5px;
-  }
-
-  /* Mobile menu */
-  .mobile-menu {
-    padding: 4rem 1.5rem;
-  }
-
-  .mobile-menu ul {
-    gap: 1.5rem;
-    font-size: 1.15rem;
-  }
-
-  /* Hero */
   .hero-title {
-    font-size: 1.65rem;
+    font-size: 1.55rem;
   }
 
-  .hero-actions .btn {
-    width: 100%;
-    justify-content: center;
+  .section-title {
+    font-size: 1.55rem;
   }
 
+  .plano-card,
+  .manutencao-card,
   .hero-contact-card {
-    font-size: 0.85rem;
-  }
-
-  /* Sobre */
-  .sobre-text p {
-    font-size: 1.05rem;
-  }
-
-  /* Galeria */
-  .espaco-grid {
-    grid-template-columns: 1fr;
-  }
-
-  /* Depoimentos */
-  .depo-card {
-    padding: 1rem;
-  }
-
-  /* Footer */
-  footer {
-    font-size: 0.75rem;
+    padding: 1.35rem 1.1rem;
   }
 }
-
-/* ============================
-   420px — celulares muito pequenos
-   ============================ */
-@media (max-width: 420px) {
-
-  .hero-title {
-    font-size: 1.45rem;
-  }
-
-  .hero-contact-card {
-    padding: 1rem;
-  }
-
-  .plano-card {
-    padding: 1.4rem 1.2rem;
-  }
-
-  .sobre-text {
-    padding: 1.6rem 1rem;
-  }
-
-  .mobile-menu ul {
-    font-size: 1.05rem;
-  }
-}
-
-
-
-/* ============================================================
-   FIM DO STYLE.CSS
-   ============================================================ */

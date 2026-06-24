@@ -1,34 +1,55 @@
+// menu.js
+
 // ===============================
-// MENU MOBILE – Controle do Toggle
+// MENU MOBILE
 // ===============================
 
 document.addEventListener("DOMContentLoaded", () => {
   const toggle = document.getElementById("menu-toggle");
   const mobileMenu = document.getElementById("mobile-menu");
+
+  if (!toggle || !mobileMenu) return;
+
   const menuLinks = mobileMenu.querySelectorAll("a");
 
-  // Abre/Fecha menu ao clicar no botão
+  function closeMenu() {
+    toggle.classList.remove("active");
+    mobileMenu.classList.remove("open");
+    toggle.setAttribute("aria-label", "Abrir menu");
+  }
+
+  function openMenu() {
+    toggle.classList.add("active");
+    mobileMenu.classList.add("open");
+    toggle.setAttribute("aria-label", "Fechar menu");
+  }
+
   toggle.addEventListener("click", () => {
-    toggle.classList.toggle("active");
-    mobileMenu.classList.toggle("open");
+    const isOpen = mobileMenu.classList.contains("open");
+
+    if (isOpen) {
+      closeMenu();
+    } else {
+      openMenu();
+    }
   });
 
-  // Fecha menu ao clicar em um link
-  menuLinks.forEach(link => {
-    link.addEventListener("click", () => {
-      toggle.classList.remove("active");
-      mobileMenu.classList.remove("open");
-    });
+  menuLinks.forEach((link) => {
+    link.addEventListener("click", closeMenu);
   });
 
-  // Fecha se clicar fora do menu
   document.addEventListener("click", (event) => {
     const clickedInsideMenu = mobileMenu.contains(event.target);
     const clickedToggle = toggle.contains(event.target);
 
     if (!clickedInsideMenu && !clickedToggle) {
-      toggle.classList.remove("active");
-      mobileMenu.classList.remove("open");
+      closeMenu();
+    }
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+      closeMenu();
     }
   });
 });

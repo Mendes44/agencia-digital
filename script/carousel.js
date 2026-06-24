@@ -1,19 +1,34 @@
+// carousel.js
+
 // ===============================
 // CARROSSEL DE TEXTOS DA HERO
 // ===============================
 
 document.addEventListener("DOMContentLoaded", () => {
   const track = document.querySelector(".hero-carousel-track");
-  const slides = Array.from(track.children);
   const dotsContainer = document.querySelector(".hero-carousel-dots");
 
-  let index = 0;
+  if (!track || !dotsContainer) return;
 
-  // Criar bolinhas
+  const slides = Array.from(track.children);
+
+  if (!slides.length) return;
+
+  let index = 0;
+  let intervalId;
+
+  dotsContainer.innerHTML = "";
+
   slides.forEach((_, i) => {
     const dot = document.createElement("button");
     dot.classList.add("hero-dot");
-    if (i === 0) dot.classList.add("active");
+    dot.setAttribute("type", "button");
+    dot.setAttribute("aria-label", `Ir para destaque ${i + 1}`);
+
+    if (i === 0) {
+      dot.classList.add("active");
+    }
+
     dotsContainer.appendChild(dot);
   });
 
@@ -23,20 +38,27 @@ document.addEventListener("DOMContentLoaded", () => {
     index = newIndex;
     track.style.transform = `translateX(-${index * 100}%)`;
 
-    dots.forEach(d => d.classList.remove("active"));
-    dots[index].classList.add("active");
+    dots.forEach((dot) => dot.classList.remove("active"));
+
+    if (dots[index]) {
+      dots[index].classList.add("active");
+    }
   }
 
-  // Troca automática
-  setInterval(() => {
-    index = (index + 1) % slides.length;
-    updateCarousel(index);
-  }, 4500);
+  function startAutoPlay() {
+    intervalId = setInterval(() => {
+      index = (index + 1) % slides.length;
+      updateCarousel(index);
+    }, 4500);
+  }
 
-  // Clique nos dots
   dots.forEach((dot, i) => {
     dot.addEventListener("click", () => {
+      clearInterval(intervalId);
       updateCarousel(i);
+      startAutoPlay();
     });
   });
+
+  startAutoPlay();
 });

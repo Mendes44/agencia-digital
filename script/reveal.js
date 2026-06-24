@@ -1,3 +1,5 @@
+// reveal.js
+
 // ===============================
 // ANIMAÇÃO REVEAL AO ROLAR A TELA
 // ===============================
@@ -7,7 +9,7 @@ function revelarElementos() {
 
   elementos.forEach((el) => {
     const posicao = el.getBoundingClientRect().top;
-    const tamanhoTela = window.innerHeight * 0.85;
+    const tamanhoTela = window.innerHeight * 0.88;
 
     if (posicao < tamanhoTela) {
       el.classList.add("active");

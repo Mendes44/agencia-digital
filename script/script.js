@@ -3,7 +3,7 @@
 // ===============================
 // CONFIGURAÇÕES GERAIS
 // ===============================
-const WHATSAPP_NUMERO = "5531987340462";
+const WHATSAPP_NUMERO = "61450764125";
 
 const MARKET_CONFIG = {
   br: {

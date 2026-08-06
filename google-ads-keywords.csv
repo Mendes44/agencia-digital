@@ -1,0 +1,40 @@
+campanha,grupo,tipo,termo
+Pesquisa - Criação de Sites,Landing Page,frase,"criação de landing page"
+Pesquisa - Criação de Sites,Landing Page,frase,"landing page profissional"
+Pesquisa - Criação de Sites,Landing Page,frase,"empresa de landing page"
+Pesquisa - Criação de Sites,Landing Page,exata,[criação de landing page]
+Pesquisa - Criação de Sites,Landing Page,exata,[landing page para empresa]
+Pesquisa - Criação de Sites,Site Profissional,frase,"criação de site profissional"
+Pesquisa - Criação de Sites,Site Profissional,frase,"desenvolvedor de site profissional"
+Pesquisa - Criação de Sites,Site Profissional,frase,"empresa para criar site"
+Pesquisa - Criação de Sites,Site Profissional,frase,"fazer site para empresa"
+Pesquisa - Criação de Sites,Site Profissional,exata,[criação de sites]
+Pesquisa - Criação de Sites,Site Profissional,exata,[site profissional]
+Pesquisa - Criação de Sites,Pequenos Negócios,frase,"site para pequeno negócio"
+Pesquisa - Criação de Sites,Pequenos Negócios,frase,"site para prestador de serviço"
+Pesquisa - Criação de Sites,Pequenos Negócios,frase,"site para empresa pequena"
+Pesquisa - Criação de Sites,Pequenos Negócios,exata,[site para pequenos negócios]
+Pesquisa - Criação de Sites,WhatsApp,frase,"site com botão whatsapp"
+Pesquisa - Criação de Sites,WhatsApp,frase,"landing page para whatsapp"
+Pesquisa - Criação de Sites,WhatsApp,exata,[site para vender pelo whatsapp]
+Pesquisa - Criação de Sites,Local/Segmentos,frase,"site para clínica"
+Pesquisa - Criação de Sites,Local/Segmentos,frase,"site para barbearia"
+Pesquisa - Criação de Sites,Local/Segmentos,frase,"site para pet shop"
+Pesquisa - Criação de Sites,Local/Segmentos,frase,"site para consultório"
+Pesquisa - Criação de Sites,Local/Segmentos,frase,"site para prestador de serviços"
+Negativas,Emprego e educação,negativa,curso
+Negativas,Emprego e educação,negativa,curso grátis
+Negativas,Emprego e educação,negativa,emprego
+Negativas,Emprego e educação,negativa,vaga
+Negativas,Emprego e educação,negativa,salário
+Negativas,Gratuidade e faça você mesmo,negativa,grátis
+Negativas,Gratuidade e faça você mesmo,negativa,gratuito
+Negativas,Gratuidade e faça você mesmo,negativa,como fazer
+Negativas,Gratuidade e faça você mesmo,negativa,tutorial
+Negativas,Gratuidade e faça você mesmo,negativa,template grátis
+Negativas,Gratuidade e faça você mesmo,negativa,código fonte
+Negativas,Plataformas e suporte,negativa,wix login
+Negativas,Plataformas e suporte,negativa,wordpress login
+Negativas,Plataformas e suporte,negativa,suporte google sites
+Negativas,Intenção inadequada,negativa,site pirata
+Negativas,Intenção inadequada,negativa,download

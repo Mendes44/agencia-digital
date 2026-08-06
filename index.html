@@ -1,684 +1,139 @@
-<!DOCTYPE html>
-<html lang="pt-br">
+<!doctype html>
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <title>Dev Mendes • Sites e Landing Pages para Pequenos Negócios</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta
-    name="description"
-    content="Criação de landing pages e sites profissionais para seu negócios! Estamos presentes no Brasil e em Portugal. Sites responsivos, com WhatsApp, formulário, SEO e manutenção mensal."
-  />
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-
-  <!-- Ícones FontAwesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
-
-  <!-- CSS -->
-  <link rel="stylesheet" href="css/style.css" />
-
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="img/favicon3.png" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Criação de Sites Profissionais | Dev Mendes</title>
+  <meta name="description" content="Sites profissionais, rápidos e responsivos a partir de R$ 349,90. Peça seu orçamento pelo WhatsApp.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#071a2f">
+  <link rel="icon" href="img/favicon3.png" sizes="32x32">
+  <link rel="preload" href="img/Projeto1.webp" as="image" type="image/webp">
+  <link rel="stylesheet" href="css/style.css">
+  <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"ProfessionalService","name":"Dev Mendes","description":"Criação de sites e landing pages profissionais","areaServed":"BR","priceRange":"A partir de R$ 349,90","telephone":"61450764125","taxID":"18.553.328/0001-09"}
+  </script>
 </head>
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
 
-<body data-market="br">
-  <!-- BOTÃO FIXO WHATSAPP -->
-  <div class="whatsapp-fixo">
-    <button type="button" class="js-whatsapp">
-      <i class="fa-brands fa-whatsapp"></i>
-      Fale pelo WhatsApp
-    </button>
-  </div>
-
-  <!-- TOPO -->
-  <header id="topo">
-    <div class="topbar">
-      <a href="#inicio" class="logo" aria-label="Dev Mendes - Início">
-        <img src="img/logo-transparente.png" alt="Dev Mendes Logo" />
+  <header class="header">
+    <div class="container header-inner">
+      <a class="brand" href="#inicio" aria-label="Dev Mendes — início">
+        <img src="img/logo-transparente.png" width="163" height="62" alt="Dev Mendes">
       </a>
-
-      <nav class="menu-desktop">
-        <ul id="menu-links">
-          <li><a href="#inicio">Início</a></li>
-          <li><a href="#sobre">Sobre</a></li>
-          <li><a href="#servicos">Serviços</a></li>
-          <li><a href="#planos">Planos</a></li>
-          <li><a href="#portfolio">Portfólio</a></li>
-          <li><a href="#manutencao">Manutenção</a></li>
-          <li><a href="#depoimentos">Depoimentos</a></li>
-          <li><a href="#agendamento">Contato</a></li>
-        </ul>
+      <nav class="nav" aria-label="Navegação principal">
+        <a href="#beneficios">Benefícios</a>
+        <a href="#portfolio">Projetos</a>
+        <a href="#como-funciona">Como funciona</a>
       </nav>
-
-      <div class="market-switch desktop-switch" aria-label="Selecionar mercado">
-        <button type="button" class="market-btn active" data-market-option="br">Brasil</button>
-        <button type="button" class="market-btn" data-market-option="pt">Portugal</button>
-      </div>
-
-      <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu">
-        <span class="line"></span>
-        <span class="line"></span>
-        <span class="line"></span>
-      </button>
-
-      <nav class="mobile-menu" id="mobile-menu">
-        <ul>
-          <li><a href="#inicio">Início</a></li>
-          <li><a href="#sobre">Sobre</a></li>
-          <li><a href="#servicos">Serviços</a></li>
-          <li><a href="#planos">Planos</a></li>
-          <li><a href="#portfolio">Portfólio</a></li>
-          <li><a href="#manutencao">Manutenção</a></li>
-          <li><a href="#depoimentos">Depoimentos</a></li>
-          <li><a href="#agendamento">Contato</a></li>
-        </ul>
-
-        <div class="market-switch mobile-switch" aria-label="Selecionar mercado">
-          <button type="button" class="market-btn active" data-market-option="br">Brasil</button>
-          <button type="button" class="market-btn" data-market-option="pt">Portugal</button>
-        </div>
-      </nav>
+      <a class="button button-small whatsapp-link" href="https://wa.me/61450764125?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20quero%20um%20or%C3%A7amento." target="_blank" rel="noopener">Pedir orçamento</a>
     </div>
   </header>
 
-  <main id="inicio">
-    <!-- HERO -->
-    <section class="hero">
-      <div class="container hero-inner">
-        <div class="hero-content reveal">
-          <div class="hero-badge">
-            <i class="fa-solid fa-bolt"></i>
-            Sites, landing pages e presença digital
-          </div>
-
-          <h1 class="hero-title">
-            Sites profissionais para pequenos negócios venderem mais pelo WhatsApp.
-          </h1>
-
-          <div class="hero-carousel-container" aria-label="Destaques da Dev Mendes">
-            <div class="hero-carousel-track">
-              <p class="hero-slide">
-                Criamos landing pages e sites rápidos, responsivos e personalizados para clínicas, salões, petshops, cafeterias, consultórios e prestadores de serviço.
-              </p>
-
-              <p class="hero-slide">
-                Seu cliente entende seus serviços, vê seus diferenciais e chama no WhatsApp com mais confiança.
-              </p>
-
-              <p class="hero-slide">
-                Estruturamos páginas com foco em conversão: apresentação, serviços, prova visual, localização, perguntas frequentes e chamada para ação.
-              </p>
-
-              <p class="hero-slide">
-                Também oferecemos manutenção mensal para manter seu site atualizado, funcionando e alinhado às mudanças do seu negócio.
-              </p>
-            </div>
-
-            <div class="hero-carousel-dots"></div>
-          </div>
-
-          <div class="hero-actions">
-            <button class="btn btn-primary js-scroll-agendar">
-              <i class="fa-brands fa-whatsapp"></i>
-              Solicitar orçamento
-            </button>
-
-            <button class="btn btn-outline" onclick="document.querySelector('#portfolio').scrollIntoView({behavior:'smooth'})">
-              Ver modelos de sites
-            </button>
-          </div>
-
-          <p class="hero-note">
-            Atendimento online para clientes do Brasil e de Portugal.
-          </p>
+  <main id="conteudo">
+    <section class="hero" id="inicio">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Seu negócio aberto 24 horas na internet</p>
+          <h1>Um site profissional para transformar visitas em clientes</h1>
+          <p class="hero-lead">Tenha uma página rápida, bonita e pronta para apresentar seu negócio com confiança — sem complicação.</p>
+          <div class="price"><span>A partir de</span> R$ 349,90</div>
+          <a class="button button-main whatsapp-link" href="https://wa.me/61450764125?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20quero%20criar%20meu%20site%20a%20partir%20de%20R%24%20349%2C90." target="_blank" rel="noopener">Quero meu site pelo WhatsApp <span aria-hidden="true">→</span></a>
+          <ul class="trust-list" aria-label="Diferenciais">
+            <li>✓ Feito para celular</li>
+            <li>✓ Entrega rápida</li>
+            <li>✓ Atendimento direto</li>
+          </ul>
         </div>
-
-        <aside class="hero-contact-card reveal">
-          <h3>Vamos conversar sobre seu site?</h3>
-          <p>
-            Antes de passar um valor fechado, entendemos o tipo de negócio, objetivo da página e recursos necessários.
-          </p>
-
-          <div class="contact-list">
-            <p><strong>E-mail:</strong> marcosmendes.dev@gmail.com</p>
-            <p><strong>WhatsApp:</strong> +55 31 98734-0462</p>
-            <p><strong>Atendimento:</strong> online, sob agendamento</p>
-            <p><strong>Mercado selecionado:</strong> <span id="market-label">Brasil</span></p>
+        <div class="hero-visual" aria-label="Exemplo de site criado pela Dev Mendes">
+          <div class="browser-card">
+            <div class="browser-top" aria-hidden="true"><i></i><i></i><i></i></div>
+            <img src="img/Projeto1.webp" width="880" height="381" alt="Exemplo de site profissional para pet shop" fetchpriority="high">
           </div>
-
-          <div class="hero-contact-pill">
-            <i class="fa-solid fa-circle-info"></i>
-            Projetos sob medida, com proposta antes do início.
-          </div>
-        </aside>
-      </div>
-    </section>
-
-    <!-- SOBRE -->
-    <section id="sobre" class="sobre-wrapper">
-      <div class="container">
-        <h2 class="section-title reveal">Sobre a Dev Mendes</h2>
-        <p class="section-subtitle reveal">
-          Desenvolvemos sites leves, claros e pensados para transformar visitantes em contatos reais.
-        </p>
-
-        <div class="sobre-grid">
-          <div class="sobre-text reveal">
-            <p>
-              A Dev Mendes ajuda pequenos negócios a terem uma presença digital mais profissional. Criamos páginas que explicam o que você faz, mostram seus serviços e facilitam o contato pelo WhatsApp, formulário ou agendamento.
-            </p>
-          </div>
-
-          <div class="sobre-adicionais">
-            <div class="sobre-card reveal">
-              <div class="sobre-icon">
-                <i class="fa-solid fa-mobile-screen-button"></i>
-              </div>
-              <div>
-                <h3>Responsivo para celular</h3>
-                <p>O site se adapta para celular, tablet e computador, priorizando a experiência do cliente.</p>
-              </div>
-            </div>
-
-            <div class="sobre-card reveal">
-              <div class="sobre-icon">
-                <i class="fa-brands fa-whatsapp"></i>
-              </div>
-              <div>
-                <h3>Foco em conversão</h3>
-                <p>Botões estratégicos para WhatsApp, formulário, localização e chamada para orçamento.</p>
-              </div>
-            </div>
-
-            <div class="sobre-card reveal">
-              <div class="sobre-icon">
-                <i class="fa-solid fa-chart-line"></i>
-              </div>
-              <div>
-                <h3>Visão de marketing</h3>
-                <p>Não criamos apenas páginas bonitas: organizamos a comunicação para gerar mais confiança.</p>
-              </div>
-            </div>
-          </div>
+          <p class="visual-badge"><strong>100% responsivo</strong><br>Funciona em celular, tablet e computador</p>
         </div>
       </div>
     </section>
 
-    <!-- SERVIÇOS -->
-    <section id="servicos" class="section-white">
+    <section class="proof-strip" aria-label="Resumo da oferta">
+      <div class="container proof-grid">
+        <p><strong>Página leve</strong><span>Carregamento rápido</span></p>
+        <p><strong>Contato fácil</strong><span>WhatsApp em destaque</span></p>
+        <p><strong>Visual profissional</strong><span>Mais confiança para comprar</span></p>
+        <p><strong>SEO essencial</strong><span>Pronto para o Google</span></p>
+      </div>
+    </section>
+
+    <section class="section" id="beneficios">
       <div class="container">
-        <h2 class="section-title reveal">O que podemos criar</h2>
-        <p class="section-subtitle reveal">
-          Soluções práticas para negócios que precisam vender, captar contatos ou parecer mais profissionais online.
-        </p>
-
-        <div class="servicos-grid">
-          <article class="servico-card reveal">
-            <i class="fa-solid fa-window-maximize"></i>
-            <h3>Landing Pages</h3>
-            <p>Páginas únicas para apresentar um serviço, captar leads ou receber contatos pelo WhatsApp.</p>
-          </article>
-
-          <article class="servico-card reveal">
-            <i class="fa-solid fa-globe"></i>
-            <h3>Sites Institucionais</h3>
-            <p>Sites com seções ou páginas para apresentar empresa, serviços, equipe, diferenciais e contato.</p>
-          </article>
-
-          <!-- <article class="servico-card reveal">
-            <i class="fa-solid fa-calendar-check"></i>
-            <h3>Agendamento e Formulários</h3>
-            <p>Estruturas simples para o cliente enviar interesse, pedido de orçamento ou solicitação de reunião.</p>
-          </article> -->
-
-          <article class="servico-card reveal">
-            <i class="fa-brands fa-whatsapp"></i>
-            <h3>Atendimento automático no WhatsApp</h3>
-            <p>Fluxos simples para responder dúvidas frequentes, coletar informações e direcionar o cliente para o atendimento certo.</p>
-          </article>
-
-          <article class="servico-card reveal">
-            <i class="fa-solid fa-screwdriver-wrench"></i>
-            <h3>Manutenção Mensal</h3>
-            <p>Atualizações, pequenos ajustes, troca de fotos, textos, links e melhorias contínuas no site.</p>
-          </article>
+        <div class="section-heading">
+          <p class="eyebrow">O que você recebe</p>
+          <h2>O essencial para conquistar clientes online</h2>
+          <p>Uma presença profissional, sem recursos desnecessários que deixam a página lenta.</p>
+        </div>
+        <div class="cards">
+          <article class="card"><span>01</span><h3>Mensagem que convence</h3><p>Organizamos seus serviços e diferenciais para o cliente entender rapidamente por que escolher você.</p></article>
+          <article class="card"><span>02</span><h3>Experiência mobile</h3><p>Botões grandes, leitura fácil e navegação simples para quem chega pelo anúncio no celular.</p></article>
+          <article class="card"><span>03</span><h3>Contato sem barreiras</h3><p>Chamadas estratégicas levam o visitante direto para uma conversa no WhatsApp.</p></article>
         </div>
       </div>
     </section>
 
-    <!-- COMO FUNCIONA -->
-    <section id="processo">
+    <section class="section section-soft" id="portfolio">
       <div class="container">
-        <h2 class="section-title reveal">Como funciona</h2>
-        <p class="section-subtitle reveal">
-          Um processo simples para tirar seu site do papel sem complicação.
-        </p>
-
-        <div class="processo-grid">
-          <article class="processo-card reveal">
-            <span>1</span>
-            <h3>Diagnóstico</h3>
-            <p>Entendemos seu negócio, público, objetivo do site e canais de contato.</p>
-          </article>
-
-          <article class="processo-card reveal">
-            <span>2</span>
-            <h3>Proposta</h3>
-            <p>Você recebe um escopo com valor, prazo, entregas e condições de pagamento.</p>
-          </article>
-
-          <article class="processo-card reveal">
-            <span>3</span>
-            <h3>Criação</h3>
-            <p>Desenvolvemos o layout, organizamos os textos e montamos a página responsiva.</p>
-          </article>
-
-          <article class="processo-card reveal">
-            <span>4</span>
-            <h3>Publicação</h3>
-            <p>Após aprovação, o site é publicado e você pode seguir com suporte mensal.</p>
-          </article>
+        <div class="section-heading">
+          <p class="eyebrow">Projetos</p>
+          <h2>Sites para negócios que querem crescer</h2>
+          <p>Exemplos reais de layouts adaptáveis à identidade da sua empresa.</p>
         </div>
-      </div>
-    </section>
-
-    <!-- PLANOS -->
-    <section id="planos" class="section-white">
-      <div class="container">
-        <h2 class="section-title reveal">Planos e valores</h2>
-        <p class="section-subtitle reveal">
-          Os valores abaixo são referências iniciais. O orçamento final depende do escopo, quantidade de páginas e integrações.
-        </p>
-
-        <div class="planos-grid">
-          <article class="plano-card reveal">
-            <div class="plano-tag">Essencial</div>
-            <h3 class="plano-nome">Landing Page Simples</h3>
-            <div
-              class="plano-preco js-price"
-              data-price-br="A partir de R$ 1.200"
-              data-price-pt="A partir de €450"
-            >
-              A partir de R$ 1.200
-            </div>
-
-            <ul class="plano-itens">
-              <li><i class="fa-solid fa-check"></i> Página única profissional</li>
-              <li><i class="fa-solid fa-check"></i> Design responsivo</li>
-              <li><i class="fa-solid fa-check"></i> Botão de WhatsApp</li>
-              <li><i class="fa-solid fa-check"></i> Seções de serviços e contato</li>
-              <li><i class="fa-solid fa-check"></i> Publicação online</li>
-            </ul>
-
-            <button class="btn btn-outline js-plan-whatsapp" data-plan="Landing Page Simples">
-              Pedir orçamento
-            </button>
-          </article>
-
-          <article class="plano-card plano-destaque reveal">
-            <div class="plano-selo">Mais indicado</div>
-            <div class="plano-tag">Profissional</div>
-            <h3 class="plano-nome">Landing Page Estratégica</h3>
-            <div
-              class="plano-preco js-price"
-              data-price-br="A partir de R$ 2.500"
-              data-price-pt="A partir de €850"
-            >
-              A partir de R$ 2.500
-            </div>
-
-            <ul class="plano-itens">
-              <li><i class="fa-solid fa-check"></i> Estrutura com foco em conversão</li>
-              <li><i class="fa-solid fa-check"></i> Copy comercial organizada</li>
-              <li><i class="fa-solid fa-check"></i> WhatsApp, formulário ou agendamento</li>
-              <li><i class="fa-solid fa-check"></i> SEO básico</li>
-              <li><i class="fa-solid fa-check"></i> Até 2 rodadas de ajustes</li>
-            </ul>
-
-            <button class="btn btn-primary js-plan-whatsapp" data-plan="Landing Page Estratégica">
-              Quero este plano
-            </button>
-          </article>
-
-          <article class="plano-card reveal">
-            <div class="plano-tag">Completo</div>
-            <h3 class="plano-nome">Site Institucional</h3>
-            <div
-              class="plano-preco js-price"
-              data-price-br="A partir de R$ 4.500"
-              data-price-pt="A partir de €1.800"
-            >
-              A partir de R$ 4.500
-            </div>
-
-            <ul class="plano-itens">
-              <li><i class="fa-solid fa-check"></i> Site com múltiplas páginas ou seções</li>
-              <li><i class="fa-solid fa-check"></i> Página inicial, sobre, serviços e contato</li>
-              <li><i class="fa-solid fa-check"></i> Formulário e WhatsApp</li>
-              <li><i class="fa-solid fa-check"></i> Estrutura mais completa para negócios</li>
-              <li><i class="fa-solid fa-check"></i> Publicação e suporte inicial</li>
-            </ul>
-
-            <button class="btn btn-outline js-plan-whatsapp" data-plan="Site Institucional">
-              Pedir orçamento
-            </button>
-          </article>
-        </div>
-
-        <p class="planos-observacao reveal">
-          Pagamento recomendado: 50% para iniciar e 50% antes da publicação. Projetos maiores podem ser parcelados conforme escopo.
-        </p>
-      </div>
-    </section>
-
-    <!-- PORTFÓLIO -->
-    <section id="portfolio">
-      <div class="container">
-        <h2 class="section-title reveal">Portfólio e modelos demonstrativos</h2>
-        <p class="section-subtitle reveal">
-          Exemplos de páginas criadas para diferentes segmentos. Cada projeto pode ser adaptado para a identidade e necessidade do cliente.
-        </p>
-
-        
         <div class="portfolio-grid">
-          <a class="portfolio-card reveal" href="https://petlegal.vercel.app/" target="_blank" rel="noopener">
-            <div class="portfolio-img" style="background-image: url('img/Projeto1.png');"></div>
-            <div class="portfolio-info">
-              <h3>Pet Shop</h3>
-              <p>Modelo com serviços, apresentação, contato rápido e visual amigável.</p>
-              <span>Ver projeto <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
-            </div>
-          </a>
-
-          <a class="portfolio-card reveal" href="https://barbearia-simao.vercel.app/index.html" target="_blank" rel="noopener">
-            <div class="portfolio-img" style="background-image: url('img/BarbeariaSimao.jpg');"></div>
-            <div class="portfolio-info">
-              <h3>Barbearia Simão</h3>
-              <p>Site de Barbearia feito para o cliente possa ver os serviços e agendar horários.</p>
-              <span>Ver projeto <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
-            </div>
-          </a>
-
-          <a class="portfolio-card reveal" href="https://clinica-medica-psi.vercel.app/" target="_blank" rel="noopener">
-            <div class="portfolio-img" style="background-image: url('img/Projeto4.png');"></div>
-            <div class="portfolio-info">
-              <h3>Clínica Médica</h3>
-              <p>Estrutura para serviços, especialidades, agendamento e credibilidade.</p>
-              <span>Ver projeto <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
-            </div>
-          </a>
-
-          <a class="portfolio-card reveal" href="https://cafeteria-site-rho.vercel.app/" target="_blank" rel="noopener">
-            <div class="portfolio-img" style="background-image: url('img/Projeto5.png');"></div>
-            <div class="portfolio-info">
-              <h3>Cafeteria</h3>
-              <p>Modelo visual para negócios locais com cardápio, endereço e horários.</p>
-              <span>Ver projeto <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
-            </div>
-          </a>
-
-          <a class="portfolio-card reveal" href="https://site-pousada-umber.vercel.app/" target="_blank" rel="noopener">
-            <div class="portfolio-img" style="background-image: url('img/Projeto6.png');"></div>
-            <div class="portfolio-info">
-              <h3>Pousada</h3>
-              <p>Modelo para hospedagem, fotos, descrição de experiência e contato.</p>
-              <span>Ver projeto <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
-            </div>
-          </a>
-
-          <a class="portfolio-card reveal" href="https://petshop-boutique.vercel.app/" target="_blank" rel="noopener">
-            <div class="portfolio-img" style="background-image: url('img/Projeto3.png');"></div>
-            <div class="portfolio-info">
-              <h3>Pet Boutique</h3>
-              <p>Site com estética mais premium para apresentar produtos e serviços.</p>
-              <span>Ver projeto <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
-            </div>
-          </a>
-          
-          <a class="portfolio-card reveal" href="https://barbearia-final-ten.vercel.app/" target="_blank" rel="noopener">
-            <div class="portfolio-img" style="background-image: url('img/Barbearia.jpg');"></div>
-            <div class="portfolio-info">
-              <h3>Barbearia</h3>
-              <p>Site para barbearia para apresentar produtos e serviços.</p>
-              <span>Ver projeto <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
-            </div>
-          </a>
-
-          <a class="portfolio-card reveal" href="https://agencia-de-viagem-one.vercel.app/" target="_blank" rel="noopener">
-            <div class="portfolio-img" style="background-image: url('img/Projeto2.png');"></div>
-            <div class="portfolio-info">
-              <h3>Agência de Viagem</h3>
-              <p>Modelo para pacotes, destinos, fotos e chamada para orçamento.</p>
-              <span>Ver projeto <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
-            </div>
-          </a>
-
-          <a class="portfolio-card reveal" href="https://imobiliaria-santos-alpha.vercel.app/" target="_blank" rel="noopener">
-            <div class="portfolio-img" style="background-image: url('img/ImobiliariaSantos.jpg');"></div>
-            <div class="portfolio-info">
-              <h3>Imobiliaria Santos</h3>
-              <p>Modelo para imobiliárias com destaque para propriedades, informações e contato.</p>
-              <span>Ver projeto <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
-            </div>
-          </a>
+          <a class="project" href="https://petlegal.vercel.app/" target="_blank" rel="noopener"><img src="img/Projeto1.webp" width="720" height="312" loading="lazy" alt="Site de pet shop"><div><h3>Pet Shop</h3><p>Serviços e contato rápido</p><span>Ver projeto →</span></div></a>
+          <a class="project" href="https://barbearia-simao.vercel.app/index.html" target="_blank" rel="noopener"><img src="img/BarbeariaSimao.webp" width="720" height="323" loading="lazy" alt="Site de barbearia"><div><h3>Barbearia</h3><p>Serviços e agendamento</p><span>Ver projeto →</span></div></a>
+          <a class="project" href="https://clinica-medica-psi.vercel.app/" target="_blank" rel="noopener"><img src="img/Projeto4.webp" width="720" height="313" loading="lazy" alt="Site de clínica médica"><div><h3>Clínica</h3><p>Credibilidade e atendimento</p><span>Ver projeto →</span></div></a>
         </div>
       </div>
     </section>
 
-    <!-- MANUTENÇÃO -->
-    <section id="manutencao" class="section-white">
-      <div class="container">
-        <h2 class="section-title reveal">Manutenção mensal</h2>
-        <p class="section-subtitle reveal">
-          Depois que o site está no ar, ele precisa continuar atualizado. A manutenção evita que o cliente precise contratar alguém do zero a cada pequena mudança.
-        </p>
-
-        <div class="manutencao-box reveal">
-          <div>
-            <h3>Por que contratar manutenção?</h3>
-            <p>
-              Negócios mudam horários, fotos, preços, serviços, campanhas, links e informações de contato. Com a manutenção mensal, seu site continua funcionando e acompanhando essas mudanças.
-            </p>
-          </div>
-
-          <div class="manutencao-price">
-            <span>Manutenção a partir de</span>
-            <strong
-              class="js-price"
-              data-price-br="R$ 350/mês"
-              data-price-pt="€120/mês"
-            >
-              R$ 350/mês
-            </strong>
-          </div>
-        </div>
-
-        <div class="manutencao-grid">
-          <article class="manutencao-card reveal">
-            <h3>Básica</h3>
-            <p
-              class="manutencao-valor js-price"
-              data-price-br="R$ 350/mês"
-              data-price-pt="€120/mês"
-            >
-              R$ 350/mês
-            </p>
-            <ul>
-              <li>Pequenos ajustes de texto</li>
-              <li>Troca de fotos</li>
-              <li>Correção de links</li>
-              <li>Verificação mensal do site</li>
-              <li>Suporte por WhatsApp</li>
-            </ul>
-          </article>
-
-          <article class="manutencao-card destaque reveal">
-            <h3>Profissional</h3>
-            <p
-              class="manutencao-valor js-price"
-              data-price-br="R$ 600/mês"
-              data-price-pt="€200/mês"
-            >
-              R$ 600/mês
-            </p>
-            <ul>
-              <li>Tudo do plano básico</li>
-              <li>Até 3 alterações mensais</li>
-              <li>Atualização de serviços ou preços</li>
-              <li>Ajustes em seções existentes</li>
-              <li>Relatório simples de visitas/cliques</li>
-            </ul>
-          </article>
-
-          <article class="manutencao-card reveal">
-            <h3>Growth</h3>
-            <p
-              class="manutencao-valor js-price"
-              data-price-br="A partir de R$ 900/mês"
-              data-price-pt="A partir de €300/mês"
-            >
-              A partir de R$ 900/mês
-            </p>
-            <ul>
-              <li>Melhorias mensais de conversão</li>
-              <li>Novas seções ou páginas pequenas</li>
-              <li>Apoio em campanhas</li>
-              <li>Landing pages sazonais</li>
-              <li>Suporte prioritário</li>
-            </ul>
-          </article>
-        </div>
+    <section class="section" id="como-funciona">
+      <div class="container process-wrap">
+        <div class="section-heading align-left"><p class="eyebrow">Simples do início ao fim</p><h2>Seu novo site em 3 passos</h2><p>Você fala sobre o negócio. Nós cuidamos da organização, do visual e da publicação.</p></div>
+        <ol class="steps">
+          <li><span>1</span><div><h3>Conte sua ideia</h3><p>Chame no WhatsApp e explique o que você precisa.</p></div></li>
+          <li><span>2</span><div><h3>Aprove a proposta</h3><p>Alinhamos conteúdo, prazo e o melhor formato para o projeto.</p></div></li>
+          <li><span>3</span><div><h3>Receba seu site</h3><p>Você revisa e, após a aprovação, colocamos tudo no ar.</p></div></li>
+        </ol>
       </div>
     </section>
 
-    <!-- DEPOIMENTOS -->
-<section id="depoimentos">
-  <div class="container">
-    <h2 class="section-title reveal">O que dizem sobre os projetos</h2>
-    <p class="section-subtitle reveal">
-      Feedbacks de clientes e projetos que mostram como um site bem estruturado ajuda pequenos negócios a parecerem mais profissionais e receberem mais contatos.
-    </p>
+    <section class="section offer" id="oferta">
+      <div class="container offer-box">
+        <div><p class="eyebrow">Comece agora</p><h2>Pronto para ter um site que valoriza seu negócio?</h2><p>Fale diretamente com quem vai criar sua página e receba uma orientação sem compromisso.</p></div>
+        <div class="offer-action"><p>A partir de <strong>R$ 349,90</strong></p><a class="button button-main whatsapp-link" href="https://wa.me/61450764125?text=Ol%C3%A1%21%20Quero%20receber%20uma%20proposta%20para%20meu%20site." target="_blank" rel="noopener">Receber proposta no WhatsApp →</a><small>Resposta em horário comercial</small></div>
+      </div>
+    </section>
 
-    <div class="depoimentos-grid">
-      <article class="depo-card reveal">
-        <img src="img/client1.jpg" alt="Cliente de salão de beleza" class="depo-foto" />
-        <h4 class="depo-nome">Ana Silva</h4>
-        <p class="depo-segmento">Salão de beleza</p>
-        <p class="depo-texto">
-          “Meu salão ficou muito mais profissional. Agora consigo enviar uma página bonita para as clientes conhecerem meus serviços antes de chamar no WhatsApp.”
-        </p>
-      </article>
-
-      <article class="depo-card reveal">
-        <img src="img/client2.jpg" alt="Cliente prestador de serviço" class="depo-foto" />
-        <h4 class="depo-nome">Carlos Lima</h4>
-        <p class="depo-segmento">Prestador de serviço</p>
-        <p class="depo-texto">
-          “Antes eu explicava tudo manualmente. Com o site, o cliente já entende o que eu faço, vê meus serviços e chega mais decidido para pedir orçamento.”
-        </p>
-      </article>
-
-      <article class="depo-card reveal">
-        <img src="img/client3.jpg" alt="Cliente de clínica" class="depo-foto" />
-        <h4 class="depo-nome">Clínica Vida+</h4>
-        <p class="depo-segmento">Clínica e atendimento</p>
-        <p class="depo-texto">
-          “O site deixou nossa comunicação mais clara e passou mais confiança para os pacientes. A integração com WhatsApp facilitou bastante o contato.”
-        </p>
-      </article>
-    </div>
-  </div>
-</section>
-
-    <!-- CONTATO / AGENDAMENTO -->
-    <section id="agendamento">
-      <div class="container">
-        <h2 class="section-title reveal">Solicite um orçamento</h2>
-        <p class="section-subtitle reveal">
-          Preencha as informações abaixo e envie direto para o WhatsApp. Vamos avaliar seu caso e indicar o melhor formato de site.
-        </p>
-
-        <form class="form-agendamento reveal" onsubmit="event.preventDefault(); enviarWhatsAppFormulario();">
-          <input type="text" id="nome" placeholder="Seu nome" required />
-          <input type="text" id="negocio" placeholder="Tipo de negócio" required />
-          <input type="text" id="objetivo" placeholder="Objetivo do site: vender, agendar, apresentar serviços..." />
-          <select id="interesse">
-            <option value="">Tenho interesse em...</option>
-            <option value="Landing Page Simples">Landing Page Simples</option>
-            <option value="Landing Page Estratégica">Landing Page Estratégica</option>
-            <option value="Site Institucional">Site Institucional</option>
-            <option value="Manutenção Mensal">Manutenção Mensal</option>
-            <option value="Ainda não sei">Ainda não sei qual plano escolher</option>
-          </select>
-          <textarea id="mensagem" placeholder="Conte um pouco sobre o que você precisa"></textarea>
-
-          <button class="btn btn-primary" type="submit">
-            <i class="fa-brands fa-whatsapp"></i>
-            Enviar para WhatsApp
-          </button>
-        </form>
+    <section class="section faq" id="faq">
+      <div class="container narrow">
+        <div class="section-heading"><p class="eyebrow">Dúvidas frequentes</p><h2>Antes de começar</h2></div>
+        <details><summary>O valor de R$ 349,90 inclui o quê?</summary><p>É o preço inicial para uma página simples. O valor final depende das seções, conteúdo, integrações e necessidades do negócio. Tudo é informado antes do início.</p></details>
+        <details><summary>O site funciona no celular?</summary><p>Sim. Todo projeto é desenvolvido com prioridade para celular e também se adapta a tablets e computadores.</p></details>
+        <details><summary>Preciso já ter textos e fotos?</summary><p>Não. Orientamos o que será necessário e ajudamos a organizar a mensagem. Imagens específicas, domínio e serviços de terceiros podem ser cobrados separadamente.</p></details>
+        <details><summary>Quanto tempo leva?</summary><p>O prazo é combinado na proposta e varia conforme o tamanho do projeto e o envio dos materiais.</p></details>
       </div>
     </section>
   </main>
 
-  <!-- FOOTER -->
   <footer class="footer">
     <div class="container footer-grid">
-      <div class="footer-col">
-        <img src="img/logo.png" class="footer-logo" alt="Dev Mendes" />
-        <p class="footer-desc">
-          Criação de sites, landing pages, automação e manutenção digital para pequenos negócios.
-        </p>
-      </div>
-
-      <div class="footer-col">
-        <h4>Contato</h4>
-        <p><strong>E-mail:</strong> marcosmendes.dev@gmail.com</p>
-        <p><strong>WhatsApp:</strong> +55 31 98734-0462</p>
-        <p><strong>Atendimento:</strong> online para Brasil e Portugal</p>
-        <p><strong>Base:</strong> Belo Horizonte/MG</p>
-      </div>
-
-      <div class="footer-col">
-        <h4>Navegação</h4>
-        <ul>
-          <li><a href="#inicio">Início</a></li>
-          <li><a href="#servicos">Serviços</a></li>
-          <li><a href="#planos">Planos</a></li>
-          <li><a href="#portfolio">Portfólio</a></li>
-          <li><a href="#manutencao">Manutenção</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-col">
-        <h4>Redes Sociais</h4>
-        <div class="footer-social">
-          <a href="https://www.instagram.com/marcosmendes44/" target="_blank" rel="noopener" aria-label="Instagram">
-            <i class="fa-brands fa-instagram"></i>
-          </a>
-          <a href="https://wa.me/5531987340462?text=Olá%2C+vim+pelo+site+Dev+Mendes!" target="_blank" rel="noopener" aria-label="WhatsApp">
-            <i class="fa-brands fa-whatsapp"></i>
-          </a>
-          <a href="https://www.linkedin.com/in/marcosmendes44/" target="_blank" rel="noopener" aria-label="LinkedIn">
-            <i class="fa-brands fa-linkedin"></i>
-          </a>
-          <a href="https://github.com/Mendes44/Mendes44/tree/main" target="_blank" rel="noopener" aria-label="GitHub">
-            <i class="fa-brands fa-github"></i>
-          </a>
-        </div>
-      </div>
+      <div><img src="img/logo-transparente.png" width="163" height="62" alt="Dev Mendes" class="footer-logo"><p>Sites rápidos e profissionais para pequenos negócios venderem mais.</p></div>
+      <div><h2>Contato</h2><p><a href="https://wa.me/61450764125" target="_blank" rel="noopener">WhatsApp: 61450764125</a></p><p><a href="mailto:marcosmendes.dev@gmail.com">marcosmendes.dev@gmail.com</a></p></div>
+      <div><h2>Dados da empresa</h2><p>Dev Mendes</p><p>CNPJ: 18.553.328/0001-09</p><p>Atendimento online em todo o Brasil</p></div>
     </div>
-
-    <div class="footer-copy">
-      © 2026 Dev Mendes — Todos os direitos reservados.
-    </div>
+    <div class="container footer-bottom"><p>© <span id="year"></span> Dev Mendes. Todos os direitos reservados.</p><a href="#inicio">Voltar ao topo ↑</a></div>
   </footer>
 
-  <!-- JS -->
-  <script src="script/script.js"></script>
-  <script src="script/reveal.js"></script>
-  <script src="script/carousel.js"></script>
-  <script src="script/menu.js"></script>
+  <a class="floating-whatsapp whatsapp-link" href="https://wa.me/61450764125?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20quero%20um%20or%C3%A7amento." target="_blank" rel="noopener" aria-label="Pedir orçamento pelo WhatsApp"><span aria-hidden="true">✆</span><b>Falar no WhatsApp</b></a>
+  <script src="script/script.js" defer></script>
 </body>
 </html>

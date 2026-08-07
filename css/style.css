@@ -369,6 +369,79 @@ summary:focus-visible {
   color: var(--green);
   font-size: 0.9rem;
 }
+/* Painel complementar que ocupa o espaço inferior direito apenas no desktop largo. */
+.hero-assurance {
+  display: none;
+}
+@media (min-width: 1200px) {
+  .hero-assurance {
+    position: absolute;
+    right: 60px;
+    bottom: 0;
+    z-index: 5;
+    display: block;
+    width: 380px;
+    max-width: 38%;
+    padding: 15px 18px 14px;
+    border: 1px solid #cfe0f7;
+    border-radius: 16px;
+    background: #fff;
+    box-shadow: 0 16px 42px rgba(7, 26, 47, 0.09);
+  }
+  .hero-assurance .eyebrow {
+    margin-bottom: 2px;
+    font-size: 0.65rem;
+    text-align: center;
+  }
+  .hero-assurance h2 {
+    color: var(--navy);
+    font-size: 1.08rem;
+    line-height: 1.2;
+    text-align: center;
+  }
+  .hero-assurance ul {
+    display: grid;
+    gap: 0;
+    margin-top: 8px;
+    list-style: none;
+  }
+  .hero-assurance li {
+    position: relative;
+    padding: 6px 0 6px 27px;
+    border-bottom: 1px solid var(--line);
+    color: var(--ink);
+    font-size: 0.76rem;
+    font-weight: 700;
+  }
+  .hero-assurance li::before {
+    content: "✓";
+    position: absolute;
+    top: 6px;
+    left: 0;
+    display: grid;
+    place-items: center;
+    width: 18px;
+    height: 18px;
+    border: 2px solid var(--blue);
+    border-radius: 50%;
+    color: var(--blue);
+    font-size: 0.6rem;
+    font-weight: 900;
+  }
+  .hero-assurance li:last-child {
+    border-bottom: 0;
+  }
+  .hero-assurance-note {
+    margin-top: 8px;
+    padding: 6px 10px;
+    border-radius: 10px;
+    background: var(--soft);
+    color: var(--blue);
+    font-size: 0.66rem;
+    font-weight: 900;
+    text-align: center;
+  }
+}
 /* ==========================================================
    FAIXA DE BENEFÍCIOS IMEDIATOS
    Resume quatro argumentos de venda logo após a primeira dobra.

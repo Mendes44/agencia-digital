@@ -1,3 +1,34 @@
+# Dev Mendes — Next.js
+
+Landing page B2B redesenhada com foco em credibilidade, conversão, acessibilidade e desempenho.
+
+## Stack atual
+
+- Next.js 16 com App Router e renderização estática
+- React 19 e TypeScript
+- Tailwind CSS 4
+- Motion carregado sob demanda para animações de entrada
+- Lucide React para ícones
+- Geist auto-hospedada
+
+## Requisitos e comandos
+
+- Node.js `24.21.0` LTS, registrado em `.nvmrc` e `.node-version`
+- npm 11 ou superior
+
+```bash
+npm install
+npm run dev
+npm run lint
+npm run build
+```
+
+O código atual está organizado em `app/`, `components/`, `lib/` e `public/`. As antigas URLs `.html` são redirecionadas para as rotas do App Router.
+
+---
+
+## Histórico da versão estática
+
 ![Logo Dev Mendes](./img/logo-transparente.png)
 
 # 🚀 Dev Mendes — Agência de Tecnologia & Desenvolvimento de Sites
@@ -274,7 +305,6 @@ If you want to connect, feel free to message me!
 
 ## 📄 License
 This project is for educational and portfolio purposes only.
-
 
 
 

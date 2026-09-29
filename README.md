@@ -38,9 +38,12 @@ O site local fica disponível em `http://localhost:3000`. O domínio canônico d
 ## Rotas
 
 - `/`: página principal
+- `/criacao-de-sites`: landing page exclusiva para campanhas de tráfego pago
 - `/projetos`: portfólio completo
 - `/privacidade`: política de privacidade
 - `/robots.txt`: diretivas para rastreadores
 - `/sitemap.xml`: mapa XML gerado pelo Next.js
 
 As antigas URLs `.html` continuam redirecionando para as rotas atuais para preservar links e sinais de SEO.
+
+A landing page de campanhas não aparece no menu nem no sitemap e usa `noindex`, mas continua acessível diretamente pela URL dos anúncios.

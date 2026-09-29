@@ -3,9 +3,7 @@ import { GeistMono } from "geist/font/mono";
 import { GeistSans } from "geist/font/sans";
 import type { ReactNode } from "react";
 import "./globals.css";
-import { Footer } from "@/components/footer";
-import { FloatingWhatsapp } from "@/components/floating-whatsapp";
-import { Header } from "@/components/header";
+import { SiteChrome } from "@/components/site-chrome";
 import { siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -70,10 +68,7 @@ export default function RootLayout({ children }: Readonly<{ children: ReactNode 
         >
           Pular para o conteúdo
         </a>
-        <Header />
-        {children}
-        <Footer />
-        <FloatingWhatsapp />
+        <SiteChrome>{children}</SiteChrome>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organization) }}

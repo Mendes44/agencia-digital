@@ -19,9 +19,10 @@ export function LeadCaptureForm() {
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
+    const form = event.currentTarget;
     setMessage("");
 
-    const formData = new FormData(event.currentTarget);
+    const formData = new FormData(form);
     const nome = String(formData.get("nome") ?? "").trim();
     const ddd = String(formData.get("ddd") ?? "").replace(/\D/g, "").slice(0, 2);
     const telefone = String(formData.get("telefone") ?? "").replace(/\D/g, "").slice(0, 9);
@@ -60,7 +61,7 @@ export function LeadCaptureForm() {
         throw new Error("REQUEST_FAILED");
       }
 
-      event.currentTarget.reset();
+      form.reset();
       setSubmitted(true);
       window.dataLayer = window.dataLayer ?? [];
       window.dataLayer.push({ event: "generate_lead", lead_source: "criacao-de-sites" });

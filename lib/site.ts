@@ -1,6 +1,6 @@
 export const siteConfig = {
   name: "Dev Mendes",
-  url: "https://dev-mendes.vercel.app",
+  url: "https://www.devmendes.com.br",
   description:
     "Landing pages e sites profissionais de alta performance para transformar visitas em oportunidades de negócio.",
   whatsapp: "5531987340462",

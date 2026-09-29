@@ -1,8 +1,11 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { Inter } from "next/font/google";
 import { LeadCaptureForm } from "@/app/criacao-de-sites/lead-capture-form";
 import styles from "@/app/criacao-de-sites/lead-page.module.css";
+
+const inter = Inter({ subsets: ["latin"], display: "swap" });
 
 export const metadata: Metadata = {
   title: "Criação de sites profissionais",
@@ -20,7 +23,7 @@ const benefits = [
 
 export default function LeadCapturePage() {
   return (
-    <main className={styles["landing-page"]}>
+    <main className={`${inter.className} ${styles["landing-page"]}`}>
       <header className={styles["site-header"]}>
         <Link className={styles.brand} href="/criacao-de-sites" aria-label="Dev Mendes — início">
           <Image src="/img/favicon3.png" width={45} height={45} alt="" priority />

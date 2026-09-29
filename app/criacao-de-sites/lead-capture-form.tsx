@@ -56,7 +56,7 @@ export function LeadCaptureForm() {
 
       if (!response.ok) {
         const detail = await response.json().catch(() => ({}));
-        if (detail.code === "23505") throw new Error("DUPLICATE");
+        if (response.status === 409 || detail.code === "23505") throw new Error("DUPLICATE");
         throw new Error("REQUEST_FAILED");
       }
 

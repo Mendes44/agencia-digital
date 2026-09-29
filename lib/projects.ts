@@ -33,6 +33,20 @@ export const projects: Project[] = [
     featured: true,
   },
   {
+    title: "Verdinho",
+    category: "Restaurante",
+    description: "Cardápio, unidades e reservas em uma experiência acolhedora.",
+    image: "/img/projeto-verdinho.webp",
+    url: "https://verdinho-restaurante.vercel.app/",
+  },
+  {
+    title: "Chico do Peixe",
+    category: "Bar e restaurante",
+    description: "Tradição, cardápio e reserva de mesas em destaque.",
+    image: "/img/projeto-chico-do-peixe.webp",
+    url: "https://chico-do-peixe.vercel.app/",
+  },
+  {
     title: "Pousada Secreta",
     category: "Hospedagem",
     description: "Acomodações, experiências e pedidos de reserva apresentados com clareza.",
